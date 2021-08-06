@@ -1,0 +1,22 @@
+// Maximum width on large screens
+@media screen and (min-width: 1200px) {
+    #page {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1200px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    body.drawer-open-left {
+        margin-left: 0;
+    }
+}
+
+// Fix for Dashboard
+@media screen and (min-width: 1360px) {
+    .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card,
+    body.drawer-open-left #region-main.has-blocks .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(25% - .5rem);
+    }
+}

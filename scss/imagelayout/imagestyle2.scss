@@ -1,0 +1,31 @@
+// Responsive images
+.atto_image_button_text-top.img-fluid,
+.atto_image_button_middle.img-fluid,
+.atto_image_button_text-bottom.img-fluid,
+.book_content img,
+.glossarypost img,
+.qtext img,
+#page-mod-wiki-view .generalbox img,
+#page-mod-page-view .generalbox img,
+#page-mod-assign-view .generalbox img,
+#page-mod-choice-view .generalbox img,
+#page-mod-feedback-view .generalbox img,
+#page-mod-forum-view .generalbox img,
+#page-mod-workshop-view .generalbox img,
+#page-mod-survey-view .generalbox img,
+#page-mod-lesson-view .contents img,
+.section .activity.modtype_label.label img,
+.modtype_url img,
+#page-mod-book-print img,
+#page-mod-data-view .list_picture,
+.moodle-dialogue img {
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+}
+.glossarypost img.userpicture {
+    min-width: 35px;
+}
+.glossarypost .comment-list img.userpicture {
+    min-width: 18px;
+}
