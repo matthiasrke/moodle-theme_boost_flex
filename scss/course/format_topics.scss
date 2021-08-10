@@ -5,7 +5,7 @@
     border-radius: $border-radius;
 }
 #page-course-view-topics:not(.editing) .course-content ul li.section .content {
-    padding: $card-spacer-y $card-spacer-x;
+    padding: $card-spacer-x;
 }
 #page-course-view-topics:not(.editing) .course-content ul li#section-0 .content {
     padding: 0 $card-spacer-x;
@@ -70,16 +70,43 @@
     display: none;
 }
 
+// Course Format Topics highlighting
+#page-course-view-topics:not(.editing) .course-content .current::before {
+    border-left: 4px solid $danger;
+    left: 0;
+}
+#page-course-view-topics:not(.editing) li.current .sectionname a {
+    font-weight: 700;
+    color: $danger !important;
+}
+
+// Course Format Topics highlighting on larger screens
+@media screen and (min-width: 576px) {
+#page-course-view-topics:not(.editing) .course-content .current::before,
+#page-course-view-weeks:not(.editing) .course-content .current::before {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+#page-course-view-topics:not(.editing) .course-content .single-section .summary {
+        margin: 0;
+    }
+}
+
 // Course Format Topics on smaller screens.
 @media screen and (max-width: 576px) {
-    #region-main-box {
+    #page-course-view-topics:not(.editing) #region-main-box {
         padding: 0;
+        border-top: 1px solid rgba(0,0,0,.125);
+    }
+    #page-course-view-topics.path-user:not(.editing) #region-main-box {
+        padding-right: 15px;
+        padding-left: 15px;
     }
     #page-course-view-topics:not(.editing) .course-content ul.topics {
         display: inherit;
     }
     #page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0) {
-        border-width: 0 0 1px 0;
+        border-width: 1px 0 0 0;
         border-radius: 0;
     }
     #page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0) .content {

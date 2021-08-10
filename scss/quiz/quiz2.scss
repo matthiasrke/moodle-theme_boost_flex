@@ -1,6 +1,6 @@
-// Advanced/Grayscale Quiz Layout
+// Advanced Quiz layout.
 
-// Quiz background
+// Quiz background.
 #page-mod-quiz-attempt section#region-main,
 #page-mod-quiz-review section#region-main,
 #page-question-preview,
@@ -22,7 +22,7 @@
     }
 }
 
-// Quiz color
+// Quiz color.
 .que .formulation,
 .path-mod-quiz .history {
     color: $gray-900;
@@ -35,7 +35,7 @@
 .multichoice .answer .r1,
 .wordselect .qtext,
 .que .formulation select,
-.que .formulation input {
+.que .formulation input:not(.btn) {
     background-color: $gray-100;
 }
 .multichoice .answer .r0:hover,
@@ -43,11 +43,16 @@
     background-color: $gray-200;
 }
 
-// Wordselect
+// Short-Answer.
+.que.shortanswer .answer input {
+    width: 100%;
+}
+
+// Wordselect.
 .wordselect .qtext {
     padding: .25rem .5rem .25rem .5rem;
 }
-// Wordselect selected words
+// Wordselect selected words.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct,
 .que.wordselect .qtext .correctresponse,
@@ -57,13 +62,13 @@
     margin: 0;
     outline: none;
 }
-// Wordselect highlight color
+// Wordselect highlight color.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct {
     background-color: #ffeb3b;
 }
 
-// Ordering
+// Ordering.
 .que.ordering .sortablelist.active {
     background-color: $gray-200;
     border: none;
@@ -76,22 +81,22 @@
     padding: .25rem .5rem .25rem .5rem;
 }
 
-// Drag and drop
-// Drag and drop onto image
+// Drag and drop.
+// Drag and drop onto image.
 .dropbackground,
 .que.ddimageortext .dropzone,
 .que.ddimageortext .draghome,
 .que.ddimageortext .drag,
 .que.ddimageortext .dropbackground,
-// Drag and drop into text
+// Drag and drop into text.
 .que.ddwtos .draghome,
 .que.ddwtos .drop.active,
-// Drag and drop onto image preview
+// Drag and drop onto image preview.
 form.mform fieldset#id_previewareaheader .droppreview,
 form.mform fieldset#id_previewareaheader .dropbackground,
-// Drag and drop markers
+// Drag and drop markers.
 .que.ddmarker .dropbackground,
-// Gapfill
+// Gapfill.
 .que.gapfill span.draggable.answers,
 .que.gapfill input[type="text"] {
     border: 1px solid $gray-400;
@@ -102,65 +107,65 @@ form.mform fieldset#id_previewareaheader .droppreview {
     font-family: $font-family-base;
 }
 
-// Shadow
-// Drag and drop onto image elements
+// Shadow.
+// Drag and drop onto image elements.
 .que.ddimageortext .draghomes .draghome,
-// Drag and drop into text elements
+// Drag and drop into text elements.
 .que.ddwtos .draghome,
 // Drag and drop markers elements
 .que.ddmarker .draghomes .marker span.markertext,
-// Gapfill elements
+// Gapfill elements.
 .que.gapfill span.draggable.answers {
     -webkit-box-shadow: $box-shadow-sm;
     box-shadow: $box-shadow-sm;
 }
-// Ordering elements
+// Ordering elements.
 .item-moving,
-// Drag and drop onto image elements
+// Drag and drop onto image elements.
 .que.ddimageortext .drag.beingdragged,
 .que.ddimageortext .draghomes .draghome.beingdragged,
 .que.ddimageortext .droparea .draghome.beingdragged,
-// Drag and drop into text elements
+// Drag and drop into text elements.
 .que.ddwtos .draghome.beingdragged,
-// Drag and drop markers elements
+// Drag and drop markers elements.
 .que.ddmarker .marker.beingdragged span.markertext,
-// Gapfill elements
+// Gapfill elements.
 .que.gapfill span.draggable.answers:hover {
     -webkit-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
 }
-// Multianswer Feedback
+// Multianswer Feedback.
 .que.multianswer .feedbackspan {
     -webkit-box-shadow: $box-shadow-lg;
     box-shadow: $box-shadow-lg;
 }
-// Wordselect
+// Wordselect.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct,
 .que.wordselect .qtext .correctresponse,
 .que.wordselect .qtext .incorrect,
-// Drag and Drop into text element placed
+// Drag and Drop into text element placed.
 .que.ddwtos .draghome.placed {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-// Focus color
-// Drag and drop onto image dropzone
+// Focus color.
+// Drag and drop onto image dropzone.
 .que.ddimageortext .dropzone:focus,
 .que.ddimageortext .droparea .draghome:focus,
 .que.ddimageortext .dropzone.valid-drag-over-drop,
 .que.ddimageortext .draghome.placed.valid-drag-over-drop,
-// Drag and drop into text
+// Drag and drop into text.
 .que.ddwtos .drop:focus,
 .que.ddwtos .drop.valid-drag-over-drop,
 .que.ddwtos .draghome.placed:focus:not(.beingdragged),
 .que.ddwtos .draghome.placed.valid-drag-over-drop,
-// Ordering
+// Ordering.
 .que.ordering .sortablelist li.sortableitem:focus,
-// Wordselect
+// Wordselect.
 .que.wordselect .qtext .keyboard_focus,
-// Gapfill
+// Gapfill.
 .que.gapfill input.droptarget:hover,
 .que.gapfill input.droptarget:focus,
 .que.gapfill input[type="text"]:focus {
@@ -170,7 +175,7 @@ form.mform fieldset#id_previewareaheader .droppreview {
     outline: 0;
 }
 
-// Gapfill
+// Gapfill.
 .que.gapfill span.draggable.answers {
     background-color: $white;
     margin-right: .5rem;
@@ -185,7 +190,7 @@ form.mform fieldset#id_previewareaheader .droppreview {
     font-style: normal;
 }
 
-// Correct or wrong answer background
+// Correct or wrong answer background.
 .que .answer .correct,
 .que .answer .correct select,
 .que select.correct,
@@ -209,54 +214,14 @@ form.mform fieldset#id_previewareaheader .droppreview {
     background-color: $white;
 }
 
-// Multiple Choice
-// Multiple Choice position of checkboxes and radio buttons
+// Multiple Choice.
+// Multiple Choice position of checkboxes and radio buttons.
 .que.multichoice .answer div.r0 input,
 .que.multichoice .answer div.r1 input {
     margin: .4rem .5rem;
 }
 
-// Multiple Choice margin
+// Multiple Choice margin.
 .que .ablock {
     margin: 1em 0 1em 0;
-}
-
-// Multiple Choice Grayscale
-.multichoice .answer .r0,
-.multichoice .answer .r1 {
-    background-color: $gray-300;
-    border: .1em solid transparent;
-    border-radius: .3em;
-    box-shadow: 0 0.1em 0 rgb(0 0 0 / 30%);
-}
-.multichoice .answer .r0 input,
-.multichoice .answer .r1 input {
-    box-shadow: none;
-}
-.multichoice .answer .r0:hover,
-.multichoice .answer .r1:hover {
-    background-color: $gray-100;
-}
-.multichoice .answer .correct {
-    background-color: $state-success-bg;;
-}
-.multichoice .answer .incorrect {
-    background-color: $state-danger-bg;;
-}
-
-// Quiz check
-#page-mod-quiz-attempt .submit {
-    color: $white;
-    background: $primary !important;
-    border-color: $primary !important;
-    border-radius: 2em;
-    outline: none;
-}
-#page-mod-quiz-attempt .submit:hover {
-    background: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 10%) !important;
-}
-#page-mod-quiz-attempt .submit:focus {
-    -webkit-box-shadow:0 0 0 .2rem rgba($primary, .5);
-    box-shadow:0 0 0 .2rem rgba($primary, .5);
 }

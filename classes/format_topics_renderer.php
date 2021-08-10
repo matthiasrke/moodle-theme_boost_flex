@@ -16,8 +16,10 @@
 
 /**
  * Basic renderer for topics format.
- *
- * @copyright 2012 Dan Poltawski
+ * 
+ * @package   theme_boost_flex
+ * @copyright 2019 Chris Kenniburg, Willian Mono
+ *            2012 Dan Poltawski
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

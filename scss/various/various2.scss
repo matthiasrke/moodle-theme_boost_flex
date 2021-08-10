@@ -1,0 +1,19 @@
+// Various styles.
+
+// Question bank
+#categoryquestions .editmenu {
+    width: 7em;
+}
+
+// Modchooser
+.modchooser .optioninfo a:hover {
+    background-color: $gray-100;
+}
+
+// Quote
+blockquote, .blockquote {
+    background-color: $gray-100;
+    border-left: 10px solid $primary;
+    margin: 1rem 0 1rem 1rem;
+    padding: .5rem;
+}

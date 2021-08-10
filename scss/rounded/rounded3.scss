@@ -1,0 +1,12 @@
+// More rounded corners.
+
+// More rounded buttons.
+.btn {
+    border-radius: 9999px;
+}
+.btn:focus {
+    outline: 0;
+}
+.btn.nav-link {
+    border-radius: $border-radius;
+}

@@ -1,4 +1,4 @@
-// Maximum width on large screens
+// Maximum width on large screens.
 @media screen and (min-width: 1200px) {
     #page {
         width: 100%;
@@ -13,7 +13,7 @@
     }
 }
 
-// Fix for Dashboard
+// Fix for Dashboard.
 @media screen and (min-width: 1360px) {
     .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card,
     body.drawer-open-left #region-main.has-blocks .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {

@@ -1,5 +1,27 @@
 <?php
-// Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Theme Boost Flex language file.
+ *
+ * @package   theme_boost_flex
+ * @copyright 2021 Matthias Reike - @matthiasrke
+ *            2020 Kristian Ringer
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
@@ -12,10 +34,10 @@ $string['pluginname'] = 'Boost Flex';
 $string['region-side-pre'] = 'Right';
 // The name of the second tab in the theme settings.
 $string['advancedsettings'] = 'Advanced settings';
-// The brand colour setting.
-$string['brandcolor'] = 'Brand colour';
-// The brand colour setting description.
-$string['brandcolor_desc'] = 'The accent colour.';
+// The brand color setting.
+$string['brandcolor'] = 'Brand color';
+// The brand color setting description.
+$string['brandcolor_desc'] = 'The accent color.';
 // Name of the settings pages.
 $string['configtitle'] = 'Boost Flex settings';
 // Name of the first settings tab.
@@ -40,35 +62,58 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 // Flex settings.
 $string['flexsettings'] = 'Flex settings';
 
+$string['yes'] = 'Yes';
+$string['no'] = 'No';
+$string['default'] = 'Moodle default';
+
 $string['styleinfo'] = 'Style settings';
 $string['styleinfo_desc'] = 'Control style settings.';
 $string['advancedinfo'] = 'Advanced settings';
 $string['advancedinfo_desc'] = 'Control advanced layout.';
 
-$string['imagelayout'] = 'Image layout';
-$string['imagelayout_desc'] = 'Makes most images responsive, but does not reduce file size.';
-$string['imagelayout1'] = 'Deactivate responsive images';
-$string['imagelayout2'] = 'Activate responsive images';
+$string['fonts'] = 'Font-size';
+$string['fonts_desc'] = 'Increase font size of some texts.';
 
-$string['attofix'] = 'Atto fix';
-$string['attofix_desc'] = 'This fixes an error in the Atto editor that adds unwanted font-sizes.';
-$string['attofix1'] = 'Deactivate Atto fix';
-$string['attofix2'] = 'Activate Atto fix';
+$string['icons'] = 'Icon size';
+$string['icons_desc'] = 'Increase icon size.';
 
-$string['pagelayout'] = 'Page layout';
-$string['pagelayout_desc'] = 'Sets a maximum width of the page for large screens.';
-$string['pagelayout1'] = 'Deactivate Page layout';
-$string['pagelayout2'] = 'Activate Page layout';
+$string['images'] = 'Image layout';
+$string['images_desc'] = 'Makes most images responsive, but does not reduce file size.';
 
-$string['quizlayout'] = 'Quiz layout';
-$string['quizlayout_desc'] = 'Choose from the following quiz layouts.';
-$string['quizlayout1'] = 'Default Quiz layout';
-$string['quizlayout2'] = 'Advanced Quiz layout';
-$string['quizlayout3'] = 'Advanced/Grayscale Quiz layout';
-$string['quizlayout4'] = 'Colored Quiz layout';
+$string['atto'] = 'Atto fix';
+$string['atto_desc'] = 'This fixes an error in the Atto editor that adds unwanted font-sizes.';
 
-$string['enhancededitbutton'] = 'Turn editing on';
-$string['enhancededitbutton_desc'] = 'Style the Turn editing on button.';
+$string['rounded'] = 'Rounded corners';
+$string['rounded_desc'] = 'Adds rounded corners to additional elements. Rounded is enabled in the preset file.';
+$string['rounded2'] = 'Additional';
+$string['rounded3'] = 'Additional / Rounder buttons';
 
-$string['enhancedformattopics'] = 'Course format Topics';
-$string['enhancedformattopics_desc'] = 'Style the course format Topics.';
+$string['page'] = 'Page layout';
+$string['page_desc'] = 'Sets a maximum width of the page for large screens.';
+
+$string['dashboard'] = 'Dashboard layout';
+$string['dashboard_desc'] = 'Adjust the layout of the dashboard.';
+
+$string['frontpage'] = 'Front page';
+$string['frontpage_desc'] = 'Adjust the layout of the front page.';
+
+$string['quiz'] = 'Quiz layout';
+$string['quiz_desc'] = 'Choose from the following quiz layouts.';
+$string['quiz2'] = 'Advanced';
+$string['quiz3'] = 'Advanced / Grayscale';
+$string['quiz4'] = 'Advanced / Colored';
+
+$string['various'] = 'Various styles';
+$string['various_desc'] = 'Adjust various styles.';
+
+$string['background'] = 'Background color';
+$string['background_desc'] = 'Adds a color to the background.';
+
+$string['flexbackground'] = 'Background color';
+$string['flexbackground_desc'] = 'Sets a background color, if background layout is activated.';
+
+$string['edit_button'] = 'Turn editing on';
+$string['edit_button_desc'] = 'Style the Turn editing on button.';
+
+$string['format_topics'] = 'Course format Topics';
+$string['format_topics_desc'] = 'Style the course format Topics.';

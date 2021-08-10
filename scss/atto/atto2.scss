@@ -1,4 +1,4 @@
-// Atto editor fix for Chrome
+// Atto editor fix for Chrome.
 .editor_atto_content p,
 .editor_atto_content span,
 .editor_atto_content strong,
@@ -22,12 +22,12 @@
     }
 }
 
-// Atto editor underline to show errors
+// Atto editor underline to show errors.
 .editor_atto_content [style*="font-size"] {
     text-decoration: underline wavy $gray-600;
 }
 
-// Atto editor fix for button */
+// Atto editor fix for button.
 .atto_fontcolor_button .dropdown-menu {
     padding: .25rem;
 }

@@ -1,0 +1,15 @@
+// Adjust the layout of the dashboard
+
+// Dashboard courses
+.dashboard-card-deck .dashboard-card:hover {
+    transform: scale(1.01, 1.01);
+    transition: transform 100ms;
+    box-shadow: $box-shadow-sm;
+}
+
+// Dashboard timeline
+@media screen and (min-width: 992px) {
+    .block-timeline .list-group {
+        max-width: 600px;
+    }
+}

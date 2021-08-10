@@ -1,0 +1,44 @@
+// Colored Quiz layout.
+
+// Multiple Choice color.
+.que.multichoice .answer .r0,
+.que.multichoice .answer .r1 {
+    color: $white;
+}
+.que.multichoice .answer > div:nth-child(4n+1) {
+    background-color: $danger;
+    box-shadow: 0 0.1em 0 darken($danger, 10%);
+}
+.que.multichoice .answer > div:nth-child(4n+2) {
+    background-color: $info;
+    box-shadow: 0 0.1em 0 darken($info, 10%);
+}
+.que.multichoice .answer > div:nth-child(4n+3) {
+    background-color: $warning;
+    box-shadow: 0 0.1em 0 darken($warning, 10%);
+}
+.que.multichoice .answer > div:nth-child(4n+4) {
+    background-color: $success;
+    box-shadow: 0 0.1em 0 darken($success, 10%);
+}
+.que.multichoice .answer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.que.multichoice .answer div.r0,
+.que.multichoice .answer div.r1 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin: .2rem;
+}
+.que.multichoice .answer div.r0:hover,
+.que.multichoice .answer div.r1:hover {
+   color: $gray-800;
+   background-color: $gray-400;
+}
+.que.multichoice .answer .text-danger {
+    color: lighten($danger, 20%) !important;
+}
+.que.multichoice .answer .text-success {
+    color: lighten($success, 20%) !important;
+}

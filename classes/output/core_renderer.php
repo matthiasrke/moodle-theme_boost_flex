@@ -21,8 +21,9 @@ use moodle_url;
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_boost
- * @copyright  2012 Bas Brands, www.basbrands.nl
+ * @package    theme_boost_flex
+ * @copyright  2016 Gareth J Barnard
+ *             2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  

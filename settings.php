@@ -1,6 +1,29 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-// Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
+/**
+ * Theme Boost Flex settings.
+ *
+ * @package    theme_boost_flex
+ * @copyright  2021 Matthias Reike - @matthiasrke
+ *             2020 Kristian Ringer
+ *             2016 Chris Kenniburg
+ *             2016 Ryan Wyllie
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
@@ -19,7 +42,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_boost_flex/preset';
     $title = get_string('preset', 'theme_boost_flex');
     $description = get_string('preset_desc', 'theme_boost_flex');
-    $default = 'default.scss';
+    $default = 'boost_flex.scss';
 
     // We list files in our own file area to add to the drop down. We will provide our own function to
     // load all the presets from the correct paths.
@@ -32,6 +55,7 @@ if ($ADMIN->fulltree) {
         $choices[$file->get_filename()] = $file->get_filename();
     }
     // These are the built in presets from Boost.
+    $choices['boost_flex.scss'] = 'boost_flex.scss';
     $choices['default.scss'] = 'default.scss';
     $choices['plain.scss'] = 'plain.scss';
 
@@ -88,52 +112,145 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Toggle Atto editor fix.
-    $name = 'theme_boost_flex/attofix';
-    $title = get_string('attofix' , 'theme_boost_flex');
-    $description = get_string('attofix_desc', 'theme_boost_flex');
-    $attofix1 = get_string('attofix1', 'theme_boost_flex');
-    $attofix2 = get_string('attofix2', 'theme_boost_flex');
-    $default = '1';
-    $choices = array('1'=>$attofix1, '2'=>$attofix2);
+    $name = 'theme_boost_flex/atto';
+    $title = get_string('atto' , 'theme_boost_flex');
+    $description = get_string('atto_desc', 'theme_boost_flex');
+    $atto1 = get_string('no', 'theme_boost_flex');
+    $atto2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$atto1, '2'=>$atto2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Rounded corners.
+    $name = 'theme_boost_flex/rounded';
+    $title = get_string('rounded' , 'theme_boost_flex');
+    $description = get_string('rounded_desc', 'theme_boost_flex');
+    $rounded1 = get_string('default', 'theme_boost_flex');
+    $rounded2 = get_string('rounded2', 'theme_boost_flex');
+    $rounded3 = get_string('rounded3', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$rounded1, '2'=>$rounded2, '3'=>$rounded3);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Font size.
+    $name = 'theme_boost_flex/fonts';
+    $title = get_string('fonts' , 'theme_boost_flex');
+    $description = get_string('fonts_desc', 'theme_boost_flex');
+    $fonts1 = get_string('no', 'theme_boost_flex');
+    $fonts2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$fonts1, '2'=>$fonts2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Icon size.
+    $name = 'theme_boost_flex/icons';
+    $title = get_string('icons' , 'theme_boost_flex');
+    $description = get_string('icons_desc', 'theme_boost_flex');
+    $icons1 = get_string('no', 'theme_boost_flex');
+    $icons2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$icons1, '2'=>$icons2);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Toggle Image layout.
-    $name = 'theme_boost_flex/imagelayout';
-    $title = get_string('imagelayout' , 'theme_boost_flex');
-    $description = get_string('imagelayout_desc', 'theme_boost_flex');
-    $imagelayout1 = get_string('imagelayout1', 'theme_boost_flex');
-    $imagelayout2 = get_string('imagelayout2', 'theme_boost_flex');
-    $default = '1';
-    $choices = array('1'=>$imagelayout1, '2'=>$imagelayout2);
+    $name = 'theme_boost_flex/images';
+    $title = get_string('images' , 'theme_boost_flex');
+    $description = get_string('images_desc', 'theme_boost_flex');
+    $images1 = get_string('no', 'theme_boost_flex');
+    $images2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$images1, '2'=>$images2);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Toggle Page layout.
-    $name = 'theme_boost_flex/pagelayout';
-    $title = get_string('pagelayout' , 'theme_boost_flex');
-    $description = get_string('pagelayout_desc', 'theme_boost_flex');
-    $pagelayout1 = get_string('pagelayout1', 'theme_boost_flex');
-    $pagelayout2 = get_string('pagelayout2', 'theme_boost_flex');
-    $default = '1';
-    $choices = array('1'=>$pagelayout1, '2'=>$pagelayout2);
+    $name = 'theme_boost_flex/page';
+    $title = get_string('page' , 'theme_boost_flex');
+    $description = get_string('page_desc', 'theme_boost_flex');
+    $page1 = get_string('no', 'theme_boost_flex');
+    $page2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$page1, '2'=>$page2);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Toggle Quiz layout design.
-    $name = 'theme_boost_flex/quizlayout';
-    $title = get_string('quizlayout' , 'theme_boost_flex');
-    $description = get_string('quizlayout_desc', 'theme_boost_flex');
-    $quizlayout1 = get_string('quizlayout1', 'theme_boost_flex');
-    $quizlayout2 = get_string('quizlayout2', 'theme_boost_flex');
-    $quizlayout3 = get_string('quizlayout3', 'theme_boost_flex');
-    $quizlayout4 = get_string('quizlayout4', 'theme_boost_flex');
-    $default = '1';
-    $choices = array('1'=>$quizlayout1, '2'=>$quizlayout2, '3'=>$quizlayout3, '4'=>$quizlayout4);
+    // Toggle Dashboard layout.
+    $name = 'theme_boost_flex/dashboard';
+    $title = get_string('dashboard' , 'theme_boost_flex');
+    $description = get_string('dashboard_desc', 'theme_boost_flex');
+    $dashboard1 = get_string('no', 'theme_boost_flex');
+    $dashboard2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$dashboard1, '2'=>$dashboard2);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Front page layout.
+    $name = 'theme_boost_flex/frontpage';
+    $title = get_string('frontpage' , 'theme_boost_flex');
+    $description = get_string('frontpage_desc', 'theme_boost_flex');
+    $frontpage1 = get_string('no', 'theme_boost_flex');
+    $frontpage2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$frontpage1, '2'=>$frontpage2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Quiz layout.
+    $name = 'theme_boost_flex/quiz';
+    $title = get_string('quiz' , 'theme_boost_flex');
+    $description = get_string('quiz_desc', 'theme_boost_flex');
+    $quiz1 = get_string('default', 'theme_boost_flex');
+    $quiz2 = get_string('quiz2', 'theme_boost_flex');
+    $quiz3 = get_string('quiz3', 'theme_boost_flex');
+    $quiz4 = get_string('quiz4', 'theme_boost_flex');
+    $default = '3';
+    $choices = array('1'=>$quiz1, '2'=>$quiz2, '3'=>$quiz3, '4'=>$quiz4);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Various styles.
+    $name = 'theme_boost_flex/various';
+    $title = get_string('various' , 'theme_boost_flex');
+    $description = get_string('various_desc', 'theme_boost_flex');
+    $various1 = get_string('no', 'theme_boost_flex');
+    $various2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$various1, '2'=>$various2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Toggle Background color.
+    $name = 'theme_boost_flex/background';
+    $title = get_string('background' , 'theme_boost_flex');
+    $description = get_string('background_desc', 'theme_boost_flex');
+    $background1 = get_string('no', 'theme_boost_flex');
+    $background2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$background1, '2'=>$background2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Variable flexbackground.
+    $name = 'theme_boost_flex/flexbackground';
+    $title = get_string('flexbackground', 'theme_boost_flex');
+    $description = get_string('flexbackground_desc', 'theme_boost_flex');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -145,28 +262,20 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Toggle for Turn editing on button changing colors.
-    $name = 'theme_boost_flex/enhancededitbutton';
-    $title = get_string('enhancededitbutton', 'theme_boost_flex');
-    $description = get_string('enhancededitbutton_desc', 'theme_boost_flex');
+    $name = 'theme_boost_flex/edit_button';
+    $title = get_string('edit_button', 'theme_boost_flex');
+    $description = get_string('edit_button_desc', 'theme_boost_flex');
     $default = 1;
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Toggle for enhanced course format Topics.
-    $name = 'theme_boost_flex/enhancedformattopics';
-    $title = get_string('enhancedformattopics', 'theme_boost_flex');
-    $description = get_string('enhancedformattopics_desc', 'theme_boost_flex');
+    $name = 'theme_boost_flex/format_topics';
+    $title = get_string('format_topics', 'theme_boost_flex');
+    $description = get_string('format_topics_desc', 'theme_boost_flex');
     $default = 1;
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    // Variable $flexbackground.
-    $name = 'theme_boost_flex/flexbackground';
-    $title = get_string('flexbackground', 'theme_boost_flex');
-    $description = get_string('flexbackground_desc', 'theme_boost_flex');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
