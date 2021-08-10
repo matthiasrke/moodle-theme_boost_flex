@@ -27,9 +27,10 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/format/topics/renderer.php');
 
+// You should not use $PAGE
 global $PAGE;
 
-if ($PAGE->theme->settings->enhancedformattopics == 1) {
+if ($PAGE->theme->settings->format_topics == 1) {
 
 class theme_boost_flex_format_topics_renderer extends format_topics_renderer {
 
@@ -71,7 +72,6 @@ class theme_boost_flex_format_topics_renderer extends format_topics_renderer {
     }
 
     protected function section_summary($section, $course, $mods) {
-    	global $PAGE;
         $classattr = 'card section main section-summary clearfix ';
         $linkclasses = 'stretched-link';
 

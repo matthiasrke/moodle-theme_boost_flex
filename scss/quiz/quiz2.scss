@@ -28,9 +28,11 @@
     color: $gray-900;
     border: 1px solid $gray-300;
 }
+
 .que .formulation hr {
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: $card-border-width solid $card-border-color;
 }
+
 .multichoice .answer .r0,
 .multichoice .answer .r1,
 .wordselect .qtext,
@@ -38,6 +40,7 @@
 .que .formulation input:not(.btn) {
     background-color: $gray-100;
 }
+
 .multichoice .answer .r0:hover,
 .multichoice .answer .r1:hover {
     background-color: $gray-200;
@@ -52,6 +55,7 @@
 .wordselect .qtext {
     padding: .25rem .5rem .25rem .5rem;
 }
+
 // Wordselect selected words.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct,
@@ -62,6 +66,7 @@
     margin: 0;
     outline: none;
 }
+
 // Wordselect highlight color.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct {
@@ -74,6 +79,7 @@
     border: none;
     border-radius: $border-radius;
 }
+
 .que.ordering .sortablelist li {
     background-color: $white;
     border-color: $gray-400;
@@ -101,6 +107,7 @@ form.mform fieldset#id_previewareaheader .dropbackground,
 .que.gapfill input[type="text"] {
     border: 1px solid $gray-400;
 }
+
 .que.ddimageortext .draghome,
 .que.ddimageortext .drag,
 form.mform fieldset#id_previewareaheader .droppreview {
@@ -119,6 +126,7 @@ form.mform fieldset#id_previewareaheader .droppreview {
     -webkit-box-shadow: $box-shadow-sm;
     box-shadow: $box-shadow-sm;
 }
+
 // Ordering elements.
 .item-moving,
 // Drag and drop onto image elements.
@@ -134,11 +142,13 @@ form.mform fieldset#id_previewareaheader .droppreview {
     -webkit-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
 }
+
 // Multianswer Feedback.
 .que.multianswer .feedbackspan {
     -webkit-box-shadow: $box-shadow-lg;
     box-shadow: $box-shadow-lg;
 }
+
 // Wordselect.
 .que.wordselect .qtext .selected,
 .que.wordselect .qtext .correct,
@@ -182,10 +192,12 @@ form.mform fieldset#id_previewareaheader .droppreview {
     margin-bottom: .5rem;
     padding: .25rem .25rem;
 }
+
 .que.gapfill input[type="text"] {
     background-color: $gray-100;
     padding: .25rem .25rem;
 }
+
 .que.gapfill span.aftergapfeedback {
     font-style: normal;
 }
@@ -199,6 +211,7 @@ form.mform fieldset#id_previewareaheader .droppreview {
 .que.ordering .sortablelist li.correct {
     background-color: $state-success-bg;
 }
+
 .que .answer .incorrect,
 .que .answer .incorrect select,
 .que select.incorrect,
@@ -207,6 +220,7 @@ form.mform fieldset#id_previewareaheader .droppreview {
 .que.ordering .sortablelist li.incorrect {
     background-color: $state-danger-bg;
 }
+
 .que.randomsamatch .answer .correct,
 .que.randomsamatch .answer .incorrect,
 .que.match .answer .correct,

@@ -11,7 +11,6 @@
 #page-mod-choice-view .generalbox img,
 #page-mod-feedback-view .generalbox img,
 #page-mod-forum-view .generalbox img,
-#page-mod-workshop-view .generalbox img,
 #page-mod-survey-view .generalbox img,
 #page-mod-lesson-view .contents img,
 .section .activity.modtype_label.label img,
@@ -23,9 +22,11 @@
     max-width: 100%;
     margin: 0;
 }
+
 .glossarypost img.userpicture {
     min-width: 35px;
 }
+
 .glossarypost .comment-list img.userpicture {
     min-width: 18px;
 }

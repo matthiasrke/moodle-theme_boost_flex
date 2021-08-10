@@ -24,11 +24,13 @@ div.pb-3.border,
 .que.gapfill input[type="text"] {
     border-radius: $border-radius;
 }
+
 // Partly remove rounded corners in Dashboard.
 .card .dashboard-card-img {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 // Remove rounded corners in Message App.
 .message-app .btn-link {
     border-radius: 0;

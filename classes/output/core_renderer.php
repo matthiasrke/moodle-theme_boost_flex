@@ -39,9 +39,8 @@ class theme_boost_flex_core_renderer extends core_renderer {
 
     public function edit_button(moodle_url $url) {
 		
-		global $PAGE;
-	
-	    if ($PAGE->theme->settings->enhancededitbutton == 1) {
+        // Setting must be checked to call this function.
+	    if ($this->page->theme->settings->edit_button == 1) {
 		
 	        $url->param('sesskey', sesskey());
         if ($this->page->user_is_editing() ) {
@@ -61,6 +60,7 @@ class theme_boost_flex_core_renderer extends core_renderer {
 			
 	    }
 
+        // Else the default function will be called (copied from boost theme).
 	    else {
 		
         $url->param('sesskey', sesskey());

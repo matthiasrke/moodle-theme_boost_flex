@@ -15,7 +15,7 @@
   }
 }
 
-// Set Background-color.
+// Set Background color.
 body,
 #page-my-index,
 #nav-drawer,
@@ -23,12 +23,15 @@ body,
     background-color: $flexbackground;
     border: 0;
 }
+
 #page-header .breadcrumb {
     border: 0;
 }
+
 #page-header .card {
     color: set-text-color($flexbackground);
 }
+
 #page-header .breadcrumb .breadcrumb-item a,
 #page-course-view-topics:not(.editing) .course-content ul.topics li#section-0 a {
     color: set-link-color($flexbackground);
@@ -40,13 +43,15 @@ body,
       background-color: $white;
       padding-top: 15px;
       padding-bottom: 15px;
-      border-top: 1px solid rgba(0, 0, 0, .125);
-      border-bottom: 1px solid rgba(0, 0, 0, .125);
+      border-top: $card-border-width solid $card-border-color;
+      border-bottom: $card-border-width solid $card-border-color;
     }
+
     #page-my-index #region-main-box {
       background-color: $flexbackground;   
       border: 0; 
     }
+    
     #page-my-index section {
       border-radius: 0;     
     }

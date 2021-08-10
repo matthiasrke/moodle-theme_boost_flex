@@ -70,6 +70,8 @@ $string['styleinfo'] = 'Style settings';
 $string['styleinfo_desc'] = 'Control style settings.';
 $string['advancedinfo'] = 'Advanced settings';
 $string['advancedinfo_desc'] = 'Control advanced layout.';
+$string['printinfo'] = 'Print settings';
+$string['printinfo_desc'] = 'Control print version.';
 
 $string['fonts'] = 'Font-size';
 $string['fonts_desc'] = 'Increase font size of some texts.';
@@ -94,7 +96,7 @@ $string['page_desc'] = 'Sets a maximum width of the page for large screens.';
 $string['dashboard'] = 'Dashboard layout';
 $string['dashboard_desc'] = 'Adjust the layout of the dashboard.';
 
-$string['frontpage'] = 'Front page';
+$string['frontpage'] = 'Front page layout';
 $string['frontpage_desc'] = 'Adjust the layout of the front page.';
 
 $string['quiz'] = 'Quiz layout';
@@ -112,8 +114,14 @@ $string['background_desc'] = 'Adds a color to the background.';
 $string['flexbackground'] = 'Background color';
 $string['flexbackground_desc'] = 'Sets a background color, if background layout is activated.';
 
-$string['edit_button'] = 'Turn editing on';
+$string['edit_button'] = 'Turn editing on button';
 $string['edit_button_desc'] = 'Style the Turn editing on button.';
 
 $string['format_topics'] = 'Course format Topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';
+
+$string['workshop'] = 'Workshop layout';
+$string['workshop_desc'] = 'Style the userplan in the workshop activity.';
+
+$string['print'] = 'Print version';
+$string['print_desc'] = 'Print version must be added last.';

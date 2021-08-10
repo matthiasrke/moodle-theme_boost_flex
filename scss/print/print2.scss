@@ -1,0 +1,72 @@
+// Responsive images.
+
+// Pagelayout print.
+// If impress was added.
+.pagelayout-print #impress,
+.pagelayout-print #impressum {
+    display: none;
+}
+
+//Remove borders.
+.pagelayout-print #region-main {
+    border: none;
+}
+
+// Print version.
+@media print {
+    body,
+    #page-my-index,
+    #page-my-index #region-main-box,
+    #page-header .card {
+        background-color: $white;
+    }
+
+    body {
+        margin: 0;
+        color: $black;
+    }
+
+    a {
+        color: $black;
+    }
+
+    #page-footer,
+    #back-to-top,
+    .breadcrumb,
+    .activity-information,
+    .activity-navigation,
+    // If those buttons have additional styles.
+    .context-header-settings-menu .action-menu,
+    .btn-edit,
+    // If impress was added.
+    .pagelayout-print #impress,
+    .pagelayout-print #impressum {
+        display: none !important;
+    }
+
+    #page {
+        margin-top: 0;
+    }
+
+    .page-context-header,
+    .page-header-headings {
+        padding: 0 !important;
+    }
+
+    .page-header-headings h1 {
+        color: $black !important;
+    }
+
+    .page-context-header .page-header-headings {
+        background-color: transparent;
+    }
+
+    #region-main {
+        border: none;
+    }
+
+    // If Icons where added before headlines.
+    .path-mod h2:before {
+        display: none;
+    }
+}

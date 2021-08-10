@@ -279,6 +279,34 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Toggle Workshop layout.
+    $name = 'theme_boost_flex/workshop';
+    $title = get_string('workshop', 'theme_boost_flex');
+    $description = get_string('workshop_desc', 'theme_boost_flex');
+    $default = 1;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Flex print info.
+    $name = 'theme_boost_flex/printinfo';
+    $heading = get_string('printinfo', 'theme_boost_flex');
+    $information = get_string('printinfo_desc', 'theme_boost_flex');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+
+    // Toggle print layout.
+    $name = 'theme_boost_flex/print';
+    $title = get_string('print' , 'theme_boost_flex');
+    $description = get_string('print_desc', 'theme_boost_flex');
+    $print1 = get_string('no', 'theme_boost_flex');
+    $print2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1'=>$background1, '2'=>$background2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $settings->add($page);
 
 }

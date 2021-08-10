@@ -165,7 +165,20 @@ function theme_boost_flex_get_main_scss_content($theme) {
     if ($theme->settings->edit_button == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/edit_button.scss');
     }
-	
+
+    // Workshop layout.
+    if ($theme->settings->workshop == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/workshop/workshop.scss');
+    }
+
+	// Print layout.
+    if ($theme->settings->print == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/print/print1.scss');
+    }
+    if ($theme->settings->print == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/print/print2.scss');
+    }
+
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.
     $pre = file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/pre.scss');
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.
