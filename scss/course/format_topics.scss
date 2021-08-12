@@ -98,13 +98,14 @@
 
 // Course Format Topics highlighting on larger screens
 @media screen and (min-width: 576px) {
-#page-course-view-topics:not(.editing) .course-content .current::before,
-#page-course-view-weeks:not(.editing) .course-content .current::before {
+
+    #page-course-view-topics:not(.editing) .course-content .current::before,
+    #page-course-view-weeks:not(.editing) .course-content .current::before {
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
     }
 
-#page-course-view-topics:not(.editing) .course-content .single-section .summary {
+    #page-course-view-topics:not(.editing) .course-content .single-section .summary {
         margin: 0;
     }
 }

@@ -9,11 +9,14 @@
 #page-mod-quiz-comment #page-content {
     background-color: $state-info-bg;
 }
+
 .que .formulation,
 .path-mod-quiz .history {
     background-color: $white;
 }
+
 @media screen and (max-width: 576px) {
+
     #page-mod-quiz-attempt,
     #page-mod-quiz-review,
     #page-question-preview section#region-main,

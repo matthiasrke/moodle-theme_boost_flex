@@ -1,18 +1,18 @@
 // Boost Flex variables
 
 // Options
-$enable-rounded:              true !default;
+$enable-rounded: true !default;
 
 // Fonts
-$font-size-base:              1rem !default;
-$headings-font-weight:        400 !default;
+$font-size-base: 1rem !default;
+$headings-font-weight: 400 !default;
 
-$h1-font-size:                $font-size-base * 2.6 !default;
-$h2-font-size:                $font-size-base * 2.2 !default;
-$h3-font-size:                $font-size-base * 1.8 !default;
-$h4-font-size:                $font-size-base * 1.4 !default;
-$h5-font-size:                $font-size-base * 1.2 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size: $font-size-base * 2.6 !default;
+$h2-font-size: $font-size-base * 2.2 !default;
+$h3-font-size: $font-size-base * 1.8 !default;
+$h4-font-size: $font-size-base * 1.4 !default;
+$h5-font-size: $font-size-base * 1.2 !default;
+$h6-font-size: $font-size-base !default;
 
 // Import FontAwesome.
 // @import "../../boost/scss/fontawesome";

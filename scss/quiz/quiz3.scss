@@ -8,17 +8,21 @@
     border-radius: .3em;
     box-shadow: 0 0.1em 0 rgb(0 0 0 / 30%);
 }
+
 .que.multichoice .answer .r0 input,
 .que.multichoice .answer .r1 input {
     box-shadow: none;
 }
+
 .que.multichoice .answer .r0:hover,
 .que.multichoice .answer .r1:hover {
     background-color: $gray-100;
 }
+
 .que.multichoice .answer .correct {
     background-color: $state-success-bg;
 }
+
 .que.multichoice .answer .incorrect {
     background-color: $state-danger-bg;
 }

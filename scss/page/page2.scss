@@ -16,6 +16,7 @@
 
 // Fix for Dashboard.
 @media screen and (min-width: 1360px) {
+
     .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card,
     body.drawer-open-left #region-main.has-blocks .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
         width: calc(25% - .5rem);

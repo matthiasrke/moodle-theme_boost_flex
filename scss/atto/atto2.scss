@@ -9,8 +9,10 @@
 .editor_atto_content a {
     font-size: $font-size-base;
 }
+
 @media screen and (min-width: 768px) {
-    .editor_atto_content p, 
+
+    .editor_atto_content p,
     .editor_atto_content span,
     .editor_atto_content strong,
     .editor_atto_content b,
