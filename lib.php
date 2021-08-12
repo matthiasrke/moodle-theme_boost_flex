@@ -18,7 +18,7 @@
  * Theme Boost Flex functions.
  *
  * @package    theme_boost_flex
- * @copyright  2021 Matthias Reike - @matthiasrke
+ * @copyright  2021 Matthias Reike
  *             2020 Kristian Ringer
  *             2016 Chris Kenniburg
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

@@ -18,7 +18,7 @@
  * Theme Boost Flex settings.
  *
  * @package    theme_boost_flex
- * @copyright  2021 Matthias Reike - @matthiasrke
+ * @copyright  2021 Matthias Reike
  *             2020 Kristian Ringer
  *             2016 Chris Kenniburg
  *             2016 Ryan Wyllie
