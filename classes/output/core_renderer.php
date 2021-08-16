@@ -79,4 +79,51 @@ class theme_boost_flex_core_renderer extends core_renderer {
 
     }
 
+    /**
+     * Creats a link to the course settings only visible to teachers
+     *
+     * @return string HTML to display in the navbar.
+     */
+    public function coursesettings_link() {
+
+        $url = new \moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
+        $title = get_string('courseadministration');
+        $icon = 'fa-cog';
+ 
+        $course = $this->page->course;
+        $context = context_course::instance($course->id);
+
+        if (has_capability('moodle/course:viewhiddenactivities', $context) && $course->id != 1) {
+
+        $output .= html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
+            html_writer::end_tag('i') , array('href' => $url, 'class' => 'nav-link', 'title' => $title));
+
+       }
+
+       return $output;
+
+    }
+
+    /**
+     * Creats a link to the admin settings only visible to admins
+     *
+     * @return string HTML to display in the navbar.
+     */
+    public function adminsettings_link() {
+
+        $url = new moodle_url('/admin/search.php');
+        $title = get_string('administrationsite');
+        $icon = 'fa-wrench';
+ 
+        if (is_siteadmin($user)) {
+
+        $output .= html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
+            html_writer::end_tag('i') , array('href' => $url, 'class' => 'nav-link', 'title' => $title));
+
+       }
+
+       return $output;
+
+    }
+
 }
