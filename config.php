@@ -70,7 +70,7 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 
 // This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
 // we want to allow presets uploaded to our own theme file area to be selected in the preset list.
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     return theme_boost_flex_get_main_scss_content($theme);
 };
 

@@ -68,12 +68,16 @@
         <ul class="nav navbar-nav usernav">
 
             <!-- navbar_flex_output -->
-            <li class="nav-item">
-                {{{ output.adminsettings_link }}}
-            </li>
-            <li class="nav-item">
-                {{{ output.coursesettings_link }}}
-            </li>        
+            {{# output.adminsettings_url }}
+            <div class="nav-item icon-no-margin">
+                <a class="nav-link" href="{{{ output.adminsettings_url }}}">{{#pix}}t/preferences, core, {{#str}}administrationsite, core{{/str}}{{/pix}}</a>
+            </div>
+            {{/ output.adminsettings_url }}      
+            {{# output.coursesettings_url }}
+            <div class="nav-item icon-no-margin">
+                <a class="nav-link" href="{{{ output.coursesettings_url }}}">{{#pix}}t/edit, core, {{#str}}courseadministration, core{{/str}}{{/pix}}</a>
+            </div>
+            {{/ output.coursesettings_url }}
 
             <!-- navbar_plugin_output -->
             <li class="nav-item">

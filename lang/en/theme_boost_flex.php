@@ -61,11 +61,11 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 
 // Flex settings.
 $string['flexsettings'] = 'Flex settings';
-
 $string['yes'] = 'Yes';
 $string['no'] = 'No';
 $string['default'] = 'Moodle default';
 
+// Flex settings.
 $string['styleinfo'] = 'Style settings';
 $string['styleinfo_desc'] = 'Control style settings.';
 $string['advancedinfo'] = 'Advanced settings';
@@ -73,55 +73,80 @@ $string['advancedinfo_desc'] = 'Control advanced layout.';
 $string['printinfo'] = 'Print settings';
 $string['printinfo_desc'] = 'Control print version.';
 
-$string['fonts'] = 'Font-size';
-$string['fonts_desc'] = 'Increase font size of some texts.';
-
-$string['icons'] = 'Icon size';
-$string['icons_desc'] = 'Increase icon size.';
-
-$string['images'] = 'Image layout';
-$string['images_desc'] = 'Makes most images responsive, but does not reduce file size.';
-
+// Atto fix.
 $string['atto'] = 'Atto fix';
 $string['atto_desc'] = 'This fixes an error in the Atto editor that adds unwanted font-sizes.';
 
+// Rounded corners.
 $string['rounded'] = 'Rounded corners';
 $string['rounded_desc'] = 'Adds rounded corners to additional elements. Rounded is enabled in the preset file.';
 $string['rounded2'] = 'Additional';
 $string['rounded3'] = 'Additional / Rounder buttons';
 
+// Font size.
+$string['fonts'] = 'Font-size';
+$string['fonts_desc'] = 'Increase font size of some texts.';
+
+// Icon size.
+$string['icons'] = 'Icon size';
+$string['icons_desc'] = 'Increase icon size.';
+
+// Image layout.
+$string['images'] = 'Image layout';
+$string['images_desc'] = 'Makes most images responsive, but does not reduce file size.';
+
+// Page layout.
 $string['page'] = 'Page layout';
 $string['page_desc'] = 'Sets a maximum width of the page for large screens.';
 
+// Dashboard layout.
 $string['dashboard'] = 'Dashboard layout';
 $string['dashboard_desc'] = 'Adjust the layout of the dashboard.';
 
+// Front page layout.
 $string['frontpage'] = 'Front page layout';
 $string['frontpage_desc'] = 'Adjust the layout of the front page.';
 
+// Quiz layout.
 $string['quiz'] = 'Quiz layout';
 $string['quiz_desc'] = 'Choose from the following quiz layouts.';
 $string['quiz2'] = 'Advanced';
 $string['quiz3'] = 'Advanced / Grayscale';
 $string['quiz4'] = 'Advanced / Colored';
 
-$string['various'] = 'Various styles';
-$string['various_desc'] = 'Adjust various styles.';
-
 $string['background'] = 'Background color';
 $string['background_desc'] = 'Adds a color to the background.';
 
+// Various styles.
+$string['various'] = 'Various styles';
+$string['various_desc'] = 'Adjust various styles.';
+
+// Background layout.
+$string['background'] = 'Background color';
+$string['background_desc'] = 'Adds a color to the background.';
 $string['flexbackground'] = 'Background color';
 $string['flexbackground_desc'] = 'Sets a background color, if background layout is activated.';
 
+// Edit button.
 $string['edit_button'] = 'Turn editing on button';
 $string['edit_button_desc'] = 'Style the Turn editing on button.';
 
+// Course format topics layout.
 $string['format_topics'] = 'Course format Topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';
 
+// Navbar admin settings icon.
+$string['adminsettings_url'] = 'Admin settings icon';
+$string['adminsettings_url_desc'] = 'Add an icon with a link to the admin settings in the navbar.';
+
+// Navbar course settings icon.
+$string['coursesettings_url'] = 'Course settings icon';
+$string['coursesettings_url_desc'] = 'Add an icon with a link to the course settings in the navbar.';
+
+// Workshop layout.
 $string['workshop'] = 'Workshop layout';
 $string['workshop_desc'] = 'Style the userplan in the workshop activity.';
 
+// Print layout.
 $string['print'] = 'Print version';
 $string['print_desc'] = 'Print version must be added last.';

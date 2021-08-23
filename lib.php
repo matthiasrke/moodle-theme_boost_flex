@@ -28,7 +28,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 // We will add callbacks here as we add features to our theme.
-function theme_boost_flex_get_main_scss_content($theme) {
+function theme_boost_flex_get_main_scss_content($theme)
+{
     global $CFG;
 
     $scss = '';
@@ -40,14 +41,13 @@ function theme_boost_flex_get_main_scss_content($theme) {
         // Theme boost_flex preset file.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/preset/boost_flex.scss');
     }
-    
+
     if ($filename == 'default.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     } else if ($filename == 'plain.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-
     } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_boost_flex', 'preset', 0, '/', $filename))) {
         // This preset file was fetched from the file area for theme_boost_flex and not theme_boost (see the line above).
         $scss .= $presetfile->get_content();
@@ -64,7 +64,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto2.scss');
     }
 
-	// Rounded corners.
+    // Rounded corners.
     if ($theme->settings->rounded == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded1.scss');
     }
@@ -76,7 +76,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded3.scss');
     }
 
-	// Fonts.
+    // Font size.
     if ($theme->settings->fonts == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/fonts/fonts1.scss');
     }
@@ -84,7 +84,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/fonts/fonts2.scss');
     }
 
-	// Icons.
+    // Icon size.
     if ($theme->settings->icons == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/icons/icons1.scss');
     }
@@ -92,7 +92,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/icons/icons2.scss');
     }
 
-	// Image layout.
+    // Image layout.
     if ($theme->settings->images == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/images/images1.scss');
     }
@@ -100,7 +100,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/images/images2.scss');
     }
 
-	// Page layout.
+    // Page layout.
     if ($theme->settings->page == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/page/page1.scss');
     }
@@ -108,7 +108,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/page/page2.scss');
     }
 
-	// Dashboard layout.
+    // Dashboard layout.
     if ($theme->settings->dashboard == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/dashboard/dashboard1.scss');
     }
@@ -116,7 +116,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/dashboard/dashboard2.scss');
     }
 
-	// Front page layout.
+    // Front page layout.
     if ($theme->settings->frontpage == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/frontpage/frontpage1.scss');
     }
@@ -124,7 +124,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/frontpage/frontpage2.scss');
     }
 
-	// Quiz layout.
+    // Quiz layout.
     if ($theme->settings->quiz == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz1.scss');
     }
@@ -140,7 +140,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz4.scss');
     }
 
-	// Background layout.
+    // Background layout.
     if ($theme->settings->background == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background1.scss');
     }
@@ -148,7 +148,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background2.scss');
     }
 
-	// Various styles.
+    // Various styles.
     if ($theme->settings->various == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various1.scss');
     }
@@ -156,14 +156,14 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various2.scss');
     }
 
- 	// Course format Topics.
-    if ($theme->settings->format_topics == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics.scss');
-    }
-
     // Edit button.
     if ($theme->settings->edit_button == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/edit_button.scss');
+    }
+
+    // Course format topics layout.
+    if ($theme->settings->format_topics == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics.scss');
     }
 
     // Workshop layout.
@@ -171,7 +171,7 @@ function theme_boost_flex_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/workshop/workshop.scss');
     }
 
-	// Print layout.
+    // Print layout.
     if ($theme->settings->print == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/print/print1.scss');
     }
@@ -185,11 +185,11 @@ function theme_boost_flex_get_main_scss_content($theme) {
     $post = file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/post.scss');
     // Combine them together.
     return $pre . "\n" . $scss . "\n" . $post;
-
 }
 
 // Configurable settings.
-function theme_boost_flex_get_pre_scss($theme) {
+function theme_boost_flex_get_pre_scss($theme)
+{
     global $CFG;
 
     $scss = '';
@@ -205,7 +205,7 @@ function theme_boost_flex_get_pre_scss($theme) {
         if (empty($value)) {
             continue;
         }
-        array_map(function($target) use (&$scss, $value) {
+        array_map(function ($target) use (&$scss, $value) {
             $scss .= '$' . $target . ': ' . $value . ";\n";
         }, (array) $targets);
     }

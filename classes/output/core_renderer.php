@@ -26,8 +26,9 @@ use moodle_url;
  *             2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- 
-class theme_boost_flex_core_renderer extends core_renderer {
+
+class theme_boost_flex_core_renderer extends core_renderer
+{
 
     /**
      * Returns HTML to display a "Turn editing on/off" button in a form.
@@ -37,93 +38,65 @@ class theme_boost_flex_core_renderer extends core_renderer {
      * Written by G J Barnard
      */
 
-    public function edit_button(moodle_url $url) {
-		
+    public function edit_button(moodle_url $url)
+    {
         // Setting must be checked to call this function.
-	    if ($this->page->theme->settings->edit_button == 1) {
-		
-	        $url->param('sesskey', sesskey());
-        if ($this->page->user_is_editing() ) {
-            $url->param('edit', 'off');
-            $btn = 'btn-danger';
-            $title = get_string('turneditingoff');
-            $icon = 'fa-power-off';
-        } else {
-            $url->param('edit', 'on');
-            $btn = 'btn-success';
-            $title = get_string('turneditingon');
-            $icon = 'fa-edit';
+        if ($this->page->theme->settings->edit_button == 1) {
+            $url->param('sesskey', sesskey());
+            if ($this->page->user_is_editing()) {
+                $url->param('edit', 'off');
+                $btn = 'btn-danger';
+                $title = get_string('turneditingoff');
+                $icon = 'fa-power-off';
+            } else {
+                $url->param('edit', 'on');
+                $btn = 'btn-success';
+                $title = get_string('turneditingon');
+                $icon = 'fa-edit';
+            }
+            return html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
+                html_writer::end_tag('i'), array('href' => $url, 'class' => 'btn btn-edit ' . $btn, 'title' => $title));
         }
-			
-        return html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
-            html_writer::end_tag('i') , array('href' => $url, 'class' => 'btn btn-edit ' . $btn, 'title' => $title));
-			
-	    }
-
         // Else the default function will be called (copied from boost theme).
-	    else {
-		
-        $url->param('sesskey', sesskey());
-        if ($this->page->user_is_editing()) {
-            $url->param('edit', 'off');
-            $editstring = get_string('turneditingoff');
-        } else {
-            $url->param('edit', 'on');
-            $editstring = get_string('turneditingon');
+        else {
+            $url->param('sesskey', sesskey());
+            if ($this->page->user_is_editing()) {
+                $url->param('edit', 'off');
+                $editstring = get_string('turneditingoff');
+            } else {
+                $url->param('edit', 'on');
+                $editstring = get_string('turneditingon');
+            }
+            $button = new \single_button($url, $editstring, 'post', ['class' => 'btn btn-primary']);
+            return $this->render_single_button($button);
         }
-	
-        $button = new \single_button($url, $editstring, 'post', ['class' => 'btn btn-primary']);
-        return $this->render_single_button($button);
-		
-	    }
-
     }
 
     /**
-     * Creats a link to the course settings only visible to teachers
+     * Creats a URL to the admin settings only visible to admins
      *
      * @return string HTML to display in the navbar.
      */
-    public function coursesettings_link() {
+    public function adminsettings_url()
+    {
+        if (is_siteadmin($user) && $this->page->theme->settings->adminsettings_url == 1) {
+            $url = new moodle_url('/admin/search.php');
+        }
+        return $url;
+    }
 
-        $url = new \moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
-        $title = get_string('courseadministration');
-        $icon = 'fa-cog';
- 
+    /**
+     * Creats a URL to the course settings only visible to teachers
+     *
+     * @return string HTML to display in the navbar.
+     */
+    public function coursesettings_url()
+    {
         $course = $this->page->course;
         $context = context_course::instance($course->id);
-
-        if (has_capability('moodle/course:viewhiddenactivities', $context) && $course->id != 1) {
-
-        $output .= html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
-            html_writer::end_tag('i') , array('href' => $url, 'class' => 'nav-link', 'title' => $title));
-
-       }
-
-       return $output;
-
+        if (has_capability('moodle/course:viewhiddenactivities', $context) && $course->id != 1 && $this->page->theme->settings->coursesettings_url == 1) {
+            $url = new \moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
+        }
+        return $url;
     }
-
-    /**
-     * Creats a link to the admin settings only visible to admins
-     *
-     * @return string HTML to display in the navbar.
-     */
-    public function adminsettings_link() {
-
-        $url = new moodle_url('/admin/search.php');
-        $title = get_string('administrationsite');
-        $icon = 'fa-wrench';
- 
-        if (is_siteadmin($user)) {
-
-        $output .= html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' icon fa fa-fw mr-0')) .
-            html_writer::end_tag('i') , array('href' => $url, 'class' => 'nav-link', 'title' => $title));
-
-       }
-
-       return $output;
-
-    }
-
 }
