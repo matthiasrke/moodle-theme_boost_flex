@@ -1,7 +1,7 @@
 // Edit button, course menu and top-button with fixed position.
 .btn-edit {
     position: fixed;
-    top: 6.5rem;
+    top: 6.75rem;
     right: 0;
     padding: .5rem 1rem;
     box-shadow: $box-shadow-sm;
@@ -13,7 +13,7 @@
     position: fixed;
     top: 3.5rem;
     right: 0;
-    padding: .5rem;
+    padding: .45rem;
     background-color: rgba($white, .75);
     border: $card-border-width solid $card-border-color;
     border-right: 0;

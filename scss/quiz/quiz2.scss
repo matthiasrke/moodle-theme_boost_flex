@@ -20,8 +20,12 @@
     #page-mod-quiz-attempt,
     #page-mod-quiz-review,
     #page-question-preview section#region-main,
-    #page-mod-quiz-comment section#region-main {
+    #page-mod-quiz-comment section#region-main,
+    #page-mod-quiz-attempt #region-main-box {
         background-color: $state-info-bg;
+    }
+    #page-mod-quiz-attempt #region-main-box {
+        border: 0;
     }
 }
 
