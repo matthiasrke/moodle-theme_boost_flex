@@ -59,11 +59,11 @@
         <div id="page-content" class="row pb-3 d-print-block">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="d-print-none">
+                <div id="region-main-settings-menu" class="d-print-none {{#output.hasnoblockdrawer}}{{#hasblocks}}has-blocks{{/hasblocks}}{{/output.hasnoblockdrawer}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" aria-label="{{#str}}content{{/str}}">
+                <section id="region-main" {{#output.hasnoblockdrawer}}{{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}{{/output.hasnoblockdrawer}} aria-label="{{#str}}content{{/str}}">
 
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
@@ -74,17 +74,26 @@
                     {{{ output.course_content_footer }}}
 
                 </section>
+                {{#output.hasnoblockdrawer}}
+                {{#hasblocks}}
+                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+                    {{{ sidepreblocks }}}
+                </section>
+                {{/hasblocks}}
+                {{/output.hasnoblockdrawer}}
+                {{#output.hasblockdrawer}}
                 {{#hasblocks}}
                 <button class="btn btn-primary block-toggler open-toggler" type="button" data-toggle="collapse" data-target="#block-drawer" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="icon fa fa-arrow-left fa-fw"></i>
+                    <i class="icon fa fa-arrow-left fa-fw" title="{{#str}}blocks{{/str}}" aria-label="{{#str}}blocks{{/str}}"></i>
                 </button>
                 <section data-region="blocks-column" id="block-drawer" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     <button class="btn btn-light block-toggler close-toggler" type="button" data-toggle="collapse" data-target="#block-drawer" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        {{#pix}}e/cancel, core, {{#str}}courseadministration, core{{/str}}{{/pix}}
+                        {{#pix}}e/cancel, core, {{#str}}closebuttontitle{{/str}}{{/pix}}
                     </button>
                     {{{ sidepreblocks }}}
                 </section>
                 {{/hasblocks}}
+                {{/output.hasblockdrawer}}
             </div>
         </div>
     </div>
@@ -101,6 +110,7 @@
 </body>
 </html>
 {{#js}}
+require(['theme_boost_flex/blockdrawer']);
 M.util.js_pending('theme_boost/loader');
 require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
     Drawer.init();

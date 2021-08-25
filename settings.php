@@ -304,6 +304,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Block toggler.
+    $name = 'theme_boost_flex/hasblockdrawer';
+    $title = get_string('hasblockdrawer', 'theme_boost_flex');
+    $description = get_string('hasblockdrawer_desc', 'theme_boost_flex');
+    $default = 1;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Course format topics layout.
     $name = 'theme_boost_flex/format_topics';
     $title = get_string('format_topics', 'theme_boost_flex');

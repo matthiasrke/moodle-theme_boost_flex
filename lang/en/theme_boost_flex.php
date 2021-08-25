@@ -114,9 +114,6 @@ $string['quiz2'] = 'Advanced';
 $string['quiz3'] = 'Advanced / Grayscale';
 $string['quiz4'] = 'Advanced / Colored';
 
-$string['background'] = 'Background color';
-$string['background_desc'] = 'Adds a color to the background.';
-
 // Various styles.
 $string['various'] = 'Various styles';
 $string['various_desc'] = 'Adjust various styles.';
@@ -131,8 +128,12 @@ $string['flexbackground_desc'] = 'Sets a background color, if background layout 
 $string['edit_button'] = 'Turn editing on button';
 $string['edit_button_desc'] = 'Style the Turn editing on button.';
 
+// Edit button.
+$string['hasblockdrawer'] = 'Block section';
+$string['hasblockdrawer_desc'] = 'Display block section as collapsible region.';
+
 // Course format topics layout.
-$string['format_topics'] = 'Course format Topics';
+$string['format_topics'] = 'Course format topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';
 
 // Navbar admin settings icon.

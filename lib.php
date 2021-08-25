@@ -161,6 +161,11 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/edit_button.scss');
     }
 
+    // Block drawer.
+    if ($theme->settings->hasblockdrawer == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/blocks/blockdrawer.scss');
+    }
+
     // Course format topics layout.
     if ($theme->settings->format_topics == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics.scss');

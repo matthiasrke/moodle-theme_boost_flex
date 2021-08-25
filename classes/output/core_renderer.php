@@ -99,4 +99,22 @@ class theme_boost_flex_core_renderer extends core_renderer
         }
         return $url;
     }
+
+    public function hasblockdrawer()
+    {
+        if ($this->page->theme->settings->hasblockdrawer == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function hasnoblockdrawer()
+    {
+        if ($this->page->theme->settings->hasblockdrawer == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
