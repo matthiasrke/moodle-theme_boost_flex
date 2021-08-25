@@ -100,6 +100,12 @@ class theme_boost_flex_core_renderer extends core_renderer
         return $url;
     }
 
+
+    /**
+     * Display if block drawer is activated.
+     *
+     * @return string HTML to display in the block section.
+     */
     public function hasblockdrawer()
     {
         if ($this->page->theme->settings->hasblockdrawer == 1) {
@@ -109,6 +115,11 @@ class theme_boost_flex_core_renderer extends core_renderer
         }
     }
 
+    /**
+     * Display default block section.
+     *
+     * @return string HTML to display in the block section.
+     */
     public function hasnoblockdrawer()
     {
         if ($this->page->theme->settings->hasblockdrawer == 0) {

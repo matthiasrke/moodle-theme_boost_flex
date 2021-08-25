@@ -14,12 +14,14 @@
     -moz-transition: right 0.5s ease, left 0.5s ease;
     transition: right 0.5s ease, left 0.5s ease;
 }
+
 #block-drawer.show {
     right: 0;
     // -webkit-transition: none;
     // -moz-transition: none;
     // transition: none;
 }
+
 .block-toggler {
     position: fixed;
     top: 9.75rem;
@@ -36,9 +38,11 @@
     -moz-transition: right 0.5s ease, left 0.5s ease;
     transition: right 0.5s ease, left 0.5s ease;
 }
+
 #block-drawer:not(.show) .block-toggler.close-toggler {
     right: -4rem;
 }
+
 #block-drawer.show .block-toggler.close-toggler {
     right: $blocks-column-width;
     padding-right: .5rem;
@@ -50,13 +54,16 @@
     // -moz-transition: none;
     // transition: none;
 }
+
 #block-drawer .block.card {
     border: $card-border-width solid $card-border-color;
 }
+
 @media screen and (max-width: 576px) {
     #block-drawer {
         width: $blocks-column-width - 40;
     }
+
     #block-drawer.show .block-toggler.close-toggler {
         right: $blocks-column-width - 40;
     }
