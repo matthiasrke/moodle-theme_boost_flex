@@ -136,6 +136,10 @@ $string['floatingactionbutton_desc'] = 'Enable a floating action button in activ
 $string['hasblockdrawer'] = 'Block section';
 $string['hasblockdrawer_desc'] = 'Display block section as collapsible region.';
 
+// Bottom navigation.
+$string['hasbottomnavigation'] = 'Bottom navifation';
+$string['hasbottomnavigation_desc'] = 'Displays a bottom navigation on smaller screens.';
+
 // Course format topics layout.
 $string['format_topics'] = 'Course format topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';

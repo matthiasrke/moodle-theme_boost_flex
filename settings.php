@@ -322,6 +322,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Bottom navigation.
+    $name = 'theme_boost_flex/hasbottomnavigation';
+    $title = get_string('hasbottomnavigation', 'theme_boost_flex');
+    $description = get_string('hasbottomnavigation_desc', 'theme_boost_flex');
+    $default = 1;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Course format topics layout.
     $name = 'theme_boost_flex/format_topics';
     $title = get_string('format_topics', 'theme_boost_flex');

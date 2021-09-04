@@ -130,6 +130,20 @@ class theme_boost_flex_core_renderer extends core_renderer
     }
 
     /**
+     * Display bottom navigation
+     *
+     * @return string HTML to display in the footer.
+     */
+    public function hasbottomnavigation()
+    {
+        if ($this->page->theme->settings->hasbottomnavigation == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Display floating action button in glossary.
      *
      * @return string HTML to display in the footer.
@@ -138,7 +152,7 @@ class theme_boost_flex_core_renderer extends core_renderer
     {
         $id = optional_param('id', 0, PARAM_INT);
         $cm = get_coursemodule_from_id('glossary', $id);
-        if ($this->page->url->compare(new moodle_url('/mod/glossary/view.php'), URL_MATCH_BASE)) {
+        if ($this->page->url->compare(new moodle_url('/mod/glossary/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
             $context = context_module::instance($cm->id);
             if (has_capability('mod/glossary:write', $context)) {
                 $url = new \moodle_url('/mod/glossary/edit.php', ['cmid' => $cm->id]);
@@ -159,7 +173,7 @@ class theme_boost_flex_core_renderer extends core_renderer
         $cm = get_coursemodule_from_id('data', $id);
         $d = optional_param('d', 0, PARAM_INT);
         $data = $DB->get_record('data', array('id' => $cm->instance));
-        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE)) {
+        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
             $context = context_module::instance($cm->id);
             if (has_capability('mod/data:writeentry', $context)) {
                 $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);

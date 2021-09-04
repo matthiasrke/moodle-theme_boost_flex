@@ -75,12 +75,13 @@
 <a href="{{{ output.data_addentry_url }}}" class="btn btn-primary btn-fab"><i class="fa fa-plus"></i></a>
 {{/ output.data_addentry_url }}
 
+{{# output.hasbottomnavigation }}
 <nav class="navbar navbar-light bg-light navbar-expand fixed-bottom d-lg-none">
 <ul class="navbar-nav w-100 justify-content-around">
 <li class="nav-item icon-no-margin"><a href="/?redirect=0" class="nav-link"><i class="icon fa fa-home"></i></a></li>
 <li class="nav-item icon-no-margin"><a href="/my/" class="nav-link"><i class="icon fa fa-tachometer"></i></a></li>
 <li class="nav-item icon-no-margin"><a href="/calendar/view.php?view=month" class="nav-link"><i class="icon fa fa-calendar"></i></a></li>
-<li class="nav-item icon-no-margin"><a href="/search/" class="nav-link"><i class="icon fa fa-search"></i></a></li>
+<li class="nav-item icon-no-margin"><a href="/user/files.php" class="nav-link"><i class="icon fa fa-file-o"></i></a></li>
 </ul>
-
 </nav>
+{{/ output.hasbottomnavigation }}
