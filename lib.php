@@ -161,6 +161,11 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/edit_button.scss');
     }
 
+    // Edit button.
+    if ($theme->settings->floatingactionbutton == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/floatingactionbutton.scss');
+    }
+
     // Block drawer.
     if ($theme->settings->hasblockdrawer == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/blocks/blockdrawer.scss');

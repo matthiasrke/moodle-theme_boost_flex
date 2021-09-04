@@ -286,6 +286,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Floating action button.
+    $name = 'theme_boost_flex/floatingactionbutton';
+    $title = get_string('floatingactionbutton', 'theme_boost_flex');
+    $description = get_string('floatingactionbutton_desc', 'theme_boost_flex');
+    $default = 1;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Navbar admin settings icon.
     $name = 'theme_boost_flex/adminsettings_url';
     $title = get_string('adminsettings_url', 'theme_boost_flex');
@@ -304,7 +313,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Block toggler.
+    // Block drawer.
     $name = 'theme_boost_flex/hasblockdrawer';
     $title = get_string('hasblockdrawer', 'theme_boost_flex');
     $description = get_string('hasblockdrawer_desc', 'theme_boost_flex');

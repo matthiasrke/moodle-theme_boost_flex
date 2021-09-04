@@ -128,7 +128,11 @@ $string['flexbackground_desc'] = 'Sets a background color, if background layout 
 $string['edit_button'] = 'Turn editing on button';
 $string['edit_button_desc'] = 'Style the Turn editing on button.';
 
-// Edit button.
+// Floating action button.
+$string['floatingactionbutton'] = 'Floating action button';
+$string['floatingactionbutton_desc'] = 'Enable a floating action button in activities.';
+
+// Block drawer.
 $string['hasblockdrawer'] = 'Block section';
 $string['hasblockdrawer_desc'] = 'Display block section as collapsible region.';
 

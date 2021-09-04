@@ -1,0 +1,24 @@
+// Floating action button displayed in activities.
+.btn-fab {
+    position: fixed;
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 2.59rem;
+    box-shadow: $box-shadow;
+}
+
+// Floating action button on smartphones and tablets.
+@media screen and (max-width: 768px) {
+    .btn-fab {
+        right: 2rem;
+        bottom: 4rem;
+    }
+}
+
+// Hide back to top button because it takes the same space.
+#page-mod-glossary-view #goto-top-link a {
+    display: none;
+}

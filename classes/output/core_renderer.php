@@ -128,4 +128,45 @@ class theme_boost_flex_core_renderer extends core_renderer
             return false;
         }
     }
+
+    /**
+     * Display floating action button in glossary.
+     *
+     * @return string HTML to display in the footer.
+     */
+    public function glossary_addentry_url()
+    {
+        $id = optional_param('id', 0, PARAM_INT);
+        $cm = get_coursemodule_from_id('glossary', $id);
+        if ($this->page->url->compare(new moodle_url('/mod/glossary/view.php'), URL_MATCH_BASE)) {
+            $context = context_module::instance($cm->id);
+            if (has_capability('mod/glossary:write', $context)) {
+                $url = new \moodle_url('/mod/glossary/edit.php', ['cmid' => $cm->id]);
+            }
+            return $url;
+        }
+    }
+
+    /**
+     * Display floating action button in database.
+     *
+     * @return string HTML to display in the footer.
+     */
+    public function data_addentry_url()
+    {
+        global $DB;
+
+        $id = optional_param('id', 0, PARAM_INT);
+        $cm = get_coursemodule_from_id('data', $id);
+        $d = optional_param('d', 0, PARAM_INT);   // database id
+        $data = $DB->get_record('data', array('id'=>$cm->instance));
+
+        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE)) {
+            $context = context_module::instance($cm->id);
+            if (has_capability('mod/data:writeentry', $context)) {
+                $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);
+            }
+            return $url;
+        }
+    }
 }
