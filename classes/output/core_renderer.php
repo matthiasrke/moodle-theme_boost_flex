@@ -127,7 +127,7 @@ class theme_boost_flex_core_renderer extends core_renderer
     }
 
     /**
-     * Display bottom navigation
+     * Display bottom navigation.
      *
      * @return string HTML to display in the footer.
      */

@@ -67,6 +67,7 @@
     </div>
 </footer>
 
+{{! Boost flex floating action button start. }}
 {{# output.glossary_addentry_url }}
 <a href="{{{ output.glossary_addentry_url }}}" class="btn btn-primary btn-fab icon-no-margin">{{#pix}}t/add, core, {{#str}}addentry, mod_glossary{{/str}}{{/pix}}</a>
 {{/ output.glossary_addentry_url }}
@@ -74,7 +75,9 @@
 {{# output.data_addentry_url }}
 <a href="{{{ output.data_addentry_url }}}" class="btn btn-primary btn-fab icon-no-margin">{{#pix}}t/add, core, {{#str}}add, mod_data{{/str}}{{/pix}}</a>
 {{/ output.data_addentry_url }}
+{{! Boost flex floating action button end. }}
 
+{{! Boost flex bottom navigation start. }}
 {{# output.hasbottomnavigation }}
 <nav class="navbar navbar-light bg-light navbar-expand fixed-bottom d-lg-none">
 <ul class="navbar-nav w-100 justify-content-around">
@@ -85,3 +88,4 @@
 </ul>
 </nav>
 {{/ output.hasbottomnavigation }}
+{{! Boost flex bottom navigation end. }}

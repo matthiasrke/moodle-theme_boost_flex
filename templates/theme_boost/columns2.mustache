@@ -63,7 +63,9 @@
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
+                {{! Boost flex block drawer start. }}
                 <section id="region-main" {{#output.hasnoblockdrawer}}{{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}{{/output.hasnoblockdrawer}} aria-label="{{#str}}content{{/str}}">
+                {{! Boost flex floating action button end. }}
 
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
@@ -74,6 +76,7 @@
                     {{{ output.course_content_footer }}}
 
                 </section>
+                {{! Boost flex block drawer start. }}
                 {{#output.hasnoblockdrawer}}
                 {{#hasblocks}}
                 <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
@@ -94,6 +97,7 @@
                 </section>
                 {{/hasblocks}}
                 {{/output.hasblockdrawer}}
+                {{! Boost flex block drawer end. }}
             </div>
         </div>
     </div>

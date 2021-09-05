@@ -19,6 +19,7 @@
 }
 
 // Hide back to top button because it takes the same space.
+#page-mod-data-view #goto-top-link a,
 #page-mod-glossary-view #goto-top-link a {
     display: none;
 }
