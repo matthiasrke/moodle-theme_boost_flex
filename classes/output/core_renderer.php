@@ -16,8 +16,6 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-use moodle_url;
-
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
@@ -79,10 +77,10 @@ class theme_boost_flex_core_renderer extends core_renderer
      */
     public function adminsettings_url()
     {
-        if (is_siteadmin($user) && $this->page->theme->settings->adminsettings_url == 1) {
+        if (is_siteadmin() && $this->page->theme->settings->adminsettings_url == 1) {
             $url = new moodle_url('/admin/search.php');
+            return $url;
         }
-        return $url;
     }
 
     /**
@@ -96,10 +94,9 @@ class theme_boost_flex_core_renderer extends core_renderer
         $context = context_course::instance($course->id);
         if (has_capability('moodle/course:viewhiddenactivities', $context) && $course->id != 1 && $this->page->theme->settings->coursesettings_url == 1) {
             $url = new \moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
+            return $url;
         }
-        return $url;
     }
-
 
     /**
      * Display if block drawer is activated.
@@ -150,14 +147,14 @@ class theme_boost_flex_core_renderer extends core_renderer
      */
     public function glossary_addentry_url()
     {
-        $id = optional_param('id', 0, PARAM_INT);
-        $cm = get_coursemodule_from_id('glossary', $id);
         if ($this->page->url->compare(new moodle_url('/mod/glossary/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
+            $id = optional_param('id', 0, PARAM_INT);
+            $cm = get_coursemodule_from_id('glossary', $id);
             $context = context_module::instance($cm->id);
             if (has_capability('mod/glossary:write', $context)) {
                 $url = new \moodle_url('/mod/glossary/edit.php', ['cmid' => $cm->id]);
+                return $url;
             }
-            return $url;
         }
     }
 
@@ -169,15 +166,26 @@ class theme_boost_flex_core_renderer extends core_renderer
     public function data_addentry_url()
     {
         global $DB;
-        $id = optional_param('id', 0, PARAM_INT);
-        $cm = get_coursemodule_from_id('data', $id);
-        $d = optional_param('d', 0, PARAM_INT);
-        $data = $DB->get_record('data', array('id' => $cm->instance));
-        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
+
+        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && strpos($_SERVER['REQUEST_URI'], "id") == true && $this->page->theme->settings->floatingactionbutton == 1) {
+            $id = optional_param('id', 0, PARAM_INT);
+            $cm = get_coursemodule_from_id('data', $id);
             $context = context_module::instance($cm->id);
             if (has_capability('mod/data:writeentry', $context)) {
+                $data = $DB->get_record('data', array('id' => $cm->instance));
                 $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);
+                return $url;
             }
+        }
+
+        if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && strpos($_SERVER['REQUEST_URI'], "d") == true && $this->page->theme->settings->floatingactionbutton == 1) {
+            $id = optional_param('id', 0, PARAM_INT);
+            $d = optional_param('d', 0, PARAM_INT);
+            // $context = context_module::instance($cm->id);
+            // if (has_capability('mod/data:writeentry', $context)) {
+            $data = $DB->get_record('data', array('id'=>$d));
+            $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);
+            // }
             return $url;
         }
     }
