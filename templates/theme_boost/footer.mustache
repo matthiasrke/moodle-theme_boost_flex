@@ -68,20 +68,20 @@
 </footer>
 
 {{# output.glossary_addentry_url }}
-<a href="{{{ output.glossary_addentry_url }}}" class="btn btn-primary btn-fab"><i class="fa fa-plus"></i></a>
+<a href="{{{ output.glossary_addentry_url }}}" class="btn btn-primary btn-fab">{{#pix}}t/add, core, {{#str}}addentry, mod_glossary{{/str}}{{/pix}}</a>
 {{/ output.glossary_addentry_url }}
 
 {{# output.data_addentry_url }}
-<a href="{{{ output.data_addentry_url }}}" class="btn btn-primary btn-fab"><i class="fa fa-plus"></i></a>
+<a href="{{{ output.data_addentry_url }}}" class="btn btn-primary btn-fab">{{#pix}}t/add, core, {{#str}}add, mod_data{{/str}}{{/pix}}</a>
 {{/ output.data_addentry_url }}
 
 {{# output.hasbottomnavigation }}
 <nav class="navbar navbar-light bg-light navbar-expand fixed-bottom d-lg-none">
 <ul class="navbar-nav w-100 justify-content-around">
-<li class="nav-item icon-no-margin"><a href="/?redirect=0" class="nav-link"><i class="icon fa fa-home"></i></a></li>
-<li class="nav-item icon-no-margin"><a href="/my/" class="nav-link"><i class="icon fa fa-tachometer"></i></a></li>
-<li class="nav-item icon-no-margin"><a href="/calendar/view.php?view=month" class="nav-link"><i class="icon fa fa-calendar"></i></a></li>
-<li class="nav-item icon-no-margin"><a href="/user/files.php" class="nav-link"><i class="icon fa fa-file-o"></i></a></li>
+<li class="nav-item icon-no-margin"><a href="/?redirect=0" class="nav-link">{{#pix}}i/home, core, {{#str}}home, core{{/str}}{{/pix}}</a></li>
+<li class="nav-item icon-no-margin"><a href="/my/" class="nav-link">{{#pix}}i/dashboard, core, {{#str}}myhome, core{{/str}}{{/pix}}</a></li>
+<li class="nav-item icon-no-margin"><a href="/calendar/view.php?view=month" class="nav-link">{{#pix}}i/calendar, core, {{#str}}calendar, core_calendar{{/str}}{{/pix}}</a></li>
+<li class="nav-item icon-no-margin"><a href="/user/files.php" class="nav-link">{{#pix}}a/add_file, core, {{#str}}privatefiles, core{{/str}}{{/pix}}</a></li>
 </ul>
 </nav>
 {{/ output.hasbottomnavigation }}
