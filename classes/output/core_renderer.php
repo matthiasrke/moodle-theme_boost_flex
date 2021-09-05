@@ -172,7 +172,7 @@ class theme_boost_flex_core_renderer extends core_renderer
         if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
             $context = context_module::instance($this->page->cm->id);
             if (has_capability('mod/data:writeentry', $context)) {
-                if (strpos($_SERVER['REQUEST_URI'], "id") !== false) {
+                if ($id) {
                     $data = $DB->get_record('data', array('id' => $cm->instance));
                 } else {
                     $data = $DB->get_record('data', array('id' => $d));
