@@ -181,12 +181,13 @@ class theme_boost_flex_core_renderer extends core_renderer
         if ($this->page->url->compare(new moodle_url('/mod/data/view.php'), URL_MATCH_BASE) && strpos($_SERVER['REQUEST_URI'], "d") == true && $this->page->theme->settings->floatingactionbutton == 1) {
             $id = optional_param('id', 0, PARAM_INT);
             $d = optional_param('d', 0, PARAM_INT);
-            // $context = context_module::instance($cm->id);
-            // if (has_capability('mod/data:writeentry', $context)) {
-            $data = $DB->get_record('data', array('id'=>$d));
-            $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);
-            // }
-            return $url;
+            $cm = get_coursemodule_from_id('data', $id);
+            $context = context_module::instance($this->page->cm->id);
+            if (has_capability('mod/data:writeentry', $context)) {
+                $data = $DB->get_record('data', array('id' => $d));
+                $url = new \moodle_url('/mod/data/edit.php', ['d' => $data->id]);
+                return $url;
+            }
         }
     }
 }
