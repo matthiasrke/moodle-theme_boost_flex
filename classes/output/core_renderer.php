@@ -113,20 +113,6 @@ class theme_boost_flex_core_renderer extends core_renderer
     }
 
     /**
-     * Display default block section.
-     *
-     * @return string HTML to display in the block section.
-     */
-    public function hasnoblockdrawer()
-    {
-        if ($this->page->theme->settings->hasblockdrawer == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
      * Display bottom navigation.
      *
      * @return string HTML to display in the footer.
