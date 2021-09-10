@@ -59,12 +59,12 @@
         <div id="page-content" class="row pb-3 d-print-block">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="d-print-none {{#output.hasnoblockdrawer}}{{#hasblocks}}has-blocks{{/hasblocks}}{{/output.hasnoblockdrawer}}">
+                <div id="region-main-settings-menu" class="d-print-none {{^output.hasblockdrawer}}{{#hasblocks}}has-blocks{{/hasblocks}}{{/output.hasblockdrawer}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
                 {{! Boost flex block drawer start. }}
-                <section id="region-main" {{#output.hasnoblockdrawer}}{{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}{{/output.hasnoblockdrawer}} aria-label="{{#str}}content{{/str}}">
+                <section id="region-main" {{^output.hasblockdrawer}}{{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}{{/output.hasblockdrawer}} aria-label="{{#str}}content{{/str}}">
                 {{! Boost flex floating action button end. }}
 
                     {{#hasregionmainsettingsmenu}}
@@ -77,13 +77,13 @@
 
                 </section>
                 {{! Boost flex block drawer start. }}
-                {{#output.hasnoblockdrawer}}
+                {{^output.hasblockdrawer}}
                 {{#hasblocks}}
                 <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
                 </section>
                 {{/hasblocks}}
-                {{/output.hasnoblockdrawer}}
+                {{/output.hasblockdrawer}}
                 {{#output.hasblockdrawer}}
                 {{#hasblocks}}
                 <button class="btn btn-primary block-toggler open-toggler" type="button" data-toggle="collapse" data-target="#block-drawer" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
