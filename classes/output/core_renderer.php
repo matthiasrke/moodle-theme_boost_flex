@@ -127,6 +127,25 @@ class theme_boost_flex_core_renderer extends core_renderer
     }
 
     /**
+     * Display floating action button in assign.
+     *
+     * @return string HTML to display in the footer.
+     */
+    public function assign_addentry_url()
+    {
+        if ($this->page->url->compare(new moodle_url('/mod/assign/view.php'), URL_MATCH_BASE) && $this->page->theme->settings->floatingactionbutton == 1) {
+            $id = optional_param('id', 0, PARAM_INT);
+            $cm = get_coursemodule_from_id('assign', $id);
+            $context = context_module::instance($cm->id);
+            $param = '&action=editsubmission';
+            if (has_capability('mod/assign:submit', $context)) {
+                $url = new \moodle_url('/mod/assign/view.php', ['id' => $cm->id]);
+                return $url;
+            }
+        }
+    }
+
+    /**
      * Display floating action button in glossary.
      *
      * @return string HTML to display in the footer.
@@ -143,7 +162,7 @@ class theme_boost_flex_core_renderer extends core_renderer
             }
         }
     }
-
+     
     /**
      * Display floating action button in database.
      *
