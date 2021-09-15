@@ -33,7 +33,15 @@
     {{> core_calendar/add_event_button}}
 
     {{! Boost flex floating action button start. }}
-    {{> theme_boost_flex/add_event_fab }}
+    {{#defaulteventcontext}}
+    <button{{!
+    }} class="btn btn-primary btn-fab icon-no-margin"{{!
+    }} data-context-id="{{defaulteventcontext}}"{{!
+    }} data-action="new-event-button"{{!
+    }}>
+    {{#pix}}t/add, core, {{#str}}newevent, core_calendar{{/str}}{{/pix}}
+    </button>
+    {{/defaulteventcontext}}
     {{! Boost flex floating action end. }}
 
 </div>
