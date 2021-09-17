@@ -140,6 +140,14 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz4.scss');
     }
 
+    // Wiki layout.
+    if ($theme->settings->wiki == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/wiki/wiki1.scss');
+    }
+    if ($theme->settings->wiki == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/wiki/wiki2.scss');
+    }
+
     // Background layout.
     if ($theme->settings->background == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background1.scss');
