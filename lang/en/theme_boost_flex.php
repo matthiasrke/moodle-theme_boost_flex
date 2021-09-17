@@ -114,10 +114,6 @@ $string['quiz2'] = 'Advanced';
 $string['quiz3'] = 'Advanced / Grayscale';
 $string['quiz4'] = 'Advanced / Colored';
 
-// Wiki layout.
-$string['wiki'] = 'Wiki layout';
-$string['wiki_desc'] = 'Adjust the layout of the wiki.';
-
 // Various styles.
 $string['various'] = 'Various styles';
 $string['various_desc'] = 'Adjust various styles.';

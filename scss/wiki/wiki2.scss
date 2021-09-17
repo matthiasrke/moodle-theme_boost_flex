@@ -1,8 +1,0 @@
-// Advanced wiki layout.
-
-/* Add pen icon to edit button */
-.path-mod-wiki .nav-tabs .nav-item a[href*="edit"]::before {
-    font-family: "FontAwesome";
-    content: "\f040";
-    margin-right: .5rem;
-}
