@@ -141,7 +141,7 @@ $string['hasblockdrawer'] = 'Block section';
 $string['hasblockdrawer_desc'] = 'Display block section as collapsible region.';
 
 // Bottom navigation.
-$string['hasbottomnavigation'] = 'Bottom navifation';
+$string['hasbottomnavigation'] = 'Bottom navigation';
 $string['hasbottomnavigation_desc'] = 'Displays a bottom navigation on smaller screens.';
 
 // Course format topics layout.
