@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version = 2021080600;
 
 // This is the named version.
-$plugin->release = 3.11.01;
+$plugin->release = '3.11.01';
 
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;
