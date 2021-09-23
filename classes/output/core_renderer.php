@@ -25,7 +25,7 @@ defined('MOODLE_INTERNAL') || die;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class theme_boost_flex_core_renderer extends core_renderer
+class theme_boost_flex_core_renderer extends \theme_boost\output\core_renderer
 {
 
     /**
