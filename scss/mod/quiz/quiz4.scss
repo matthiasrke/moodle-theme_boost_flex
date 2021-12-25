@@ -33,9 +33,17 @@
 
 .que.multichoice .answer div.r0,
 .que.multichoice .answer div.r1 {
+    margin: .2rem;
+}
+
+.que.multichoice .answer div.r0 input,
+.que.multichoice .answer div.r1 input {
+    margin-top: 1.15rem;
+}
+
+.que.multichoice .answer .w-auto {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    margin: .2rem;
 }
 
 .que.multichoice .answer div.r0:hover,

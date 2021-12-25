@@ -26,16 +26,16 @@
 defined('MOODLE_INTERNAL') || die();
 
 // This is the version of the plugin.
-$plugin->version = 2021080600;
+$plugin->version = 2021052506;
 
 // This is the named version.
-$plugin->release = '3.11.01';
+$plugin->release = '4.0';
 
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;
 
 // This is the version of Moodle this plugin requires.
-$plugin->requires = 2020110300;
+$plugin->requires = '2021052500';
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
@@ -43,5 +43,5 @@ $plugin->component = 'theme_boost_flex';
 
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [
-    'theme_boost' => 2020110900
+    'theme_boost' => 2021052506
 ];

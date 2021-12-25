@@ -227,16 +227,23 @@
  */
  .path-mod-workshop .userplan {
     font-size: 90%;
-    border: 0;
+    border-color: $card-border-color;
 }
 
 .path-mod-workshop .userplan .card.alert-secondary {
     border-color: $card-border-color;
 }
 
+.path-mod-workshop .userplan dt.active,
+.path-mod-workshop .userplan dd.active {
+    color: $success;
+    background-color: $state-success-bg;
+}
+
 .path-mod-workshop .userplan ul,
 .path-mod-workshop .userplan li {
   list-style: none;
+  background-image: none !important;
 }
 
 .path-mod-workshop .userplan li::before {
@@ -244,7 +251,7 @@
     font-size: 120%;
     content: '\f096';
     float: left;
-    margin-left: -1.25rem;
+    margin-left: 0;
     margin-top: -.15rem;
 }
 

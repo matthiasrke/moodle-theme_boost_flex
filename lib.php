@@ -27,11 +27,67 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Inject additional SCSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_boost_flex_get_extra_scss($theme) {
+    $content = '';
+    $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
+
+    // Sets the background image, and its settings.
+    if (!empty($imageurl)) {
+        $content .= 'body { ';
+        $content .= "background-image: url('$imageurl'); background-size: cover;";
+        $content .= ' }';
+    }
+
+    // Sets the login background image.
+    $loginbackgroundimageurl = $theme->setting_file_url('loginbackgroundimage', 'loginbackgroundimage');
+    if (!empty($loginbackgroundimageurl)) {
+        $content .= 'body.pagelayout-login #page { ';
+        $content .= "background-image: url('$loginbackgroundimageurl'); background-size: cover;";
+        $content .= ' }';
+    }
+
+    // Always return the background image with the scss when we have it.
+    return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
+}
+
+/**
+ * Serves any files associated with the theme settings.
+ *
+ * @param stdClass $course
+ * @param stdClass $cm
+ * @param context $context
+ * @param string $filearea
+ * @param array $args
+ * @param bool $forcedownload
+ * @param array $options
+ * @return bool
+ */
+function theme_boost_flex_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' ||
+        $filearea === 'loginbackgroundimage')) {
+        $theme = theme_config::load('boost_flex');
+        // By default, theme files must be cache-able by both browsers and proxies.
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
+        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+    } else {
+        send_file_not_found();
+    }
+}
+
 // We will add callbacks here as we add features to our theme.
 function theme_boost_flex_get_main_scss_content($theme)
 {
     global $CFG;
 
+    // Boost general.
     $scss = '';
     $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
     $fs = get_file_storage();
@@ -56,14 +112,7 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     }
 
-    // Atto fix.
-    if ($theme->settings->atto == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto1.scss');
-    }
-    if ($theme->settings->atto == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto2.scss');
-    }
-
+    // Styles.
     // Rounded corners.
     if ($theme->settings->rounded == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded1.scss');
@@ -124,30 +173,6 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/frontpage/frontpage2.scss');
     }
 
-    // Quiz layout.
-    if ($theme->settings->quiz == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz1.scss');
-    }
-    if ($theme->settings->quiz == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz2.scss');
-    }
-    if ($theme->settings->quiz == 3) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz2.scss');
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz3.scss');
-    }
-    if ($theme->settings->quiz == 4) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz2.scss');
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/quiz/quiz4.scss');
-    }
-
-    // Wiki layout.
-    if ($theme->settings->wiki == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/wiki/wiki1.scss');
-    }
-    if ($theme->settings->wiki == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/wiki/wiki2.scss');
-    }
-
     // Background layout.
     if ($theme->settings->background == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background1.scss');
@@ -164,32 +189,46 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various2.scss');
     }
 
-    // Edit button.
-    if ($theme->settings->edit_button == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/edit_button.scss');
-    }
-
-    // Edit button.
-    if ($theme->settings->floatingactionbutton == 0) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/floatingactionbutton1.scss');
-    }
-    if ($theme->settings->floatingactionbutton == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/floatingactionbutton2.scss');
-    }
-
-    // Block drawer.
-    if ($theme->settings->hasblockdrawer == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/blocks/blockdrawer.scss');
-    }
-
-    // Course format topics layout.
+    // Course layout.
+    // Format topics layout.
     if ($theme->settings->format_topics == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics1.scss');
+    }
+    if ($theme->settings->format_topics == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
+    }
+
+    // Mod activities.
+    // Quiz layout.
+    if ($theme->settings->quiz == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz1.scss');
+    }
+    if ($theme->settings->quiz == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz2.scss');
+    }
+    if ($theme->settings->quiz == 3) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz3.scss');
+    }
+    if ($theme->settings->quiz == 4) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz4.scss');
+    }
+
+    // Wiki layout.
+    if ($theme->settings->wiki == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/wiki/wiki1.scss');
+    }
+    if ($theme->settings->wiki == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/wiki/wiki2.scss');
     }
 
     // Workshop layout.
     if ($theme->settings->workshop == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/workshop/workshop.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/workshop/workshop1.scss');
+    }
+    if ($theme->settings->workshop == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/workshop/workshop2.scss');
     }
 
     // Print layout.
@@ -200,6 +239,16 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/print/print2.scss');
     }
 
+    // Experimental.
+    // Atto fix.
+    if ($theme->settings->atto == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto1.scss');
+    }
+    if ($theme->settings->atto == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto2.scss');
+    }
+
+    // Boost advanced.
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.
     $pre = file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/pre.scss');
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.

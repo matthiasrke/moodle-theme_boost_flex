@@ -1,10 +1,17 @@
 // Maximum width on large screens.
 @media screen and (min-width: 1200px) {
-    #page {
+
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner,
+    .header-maxwidth,
+    .secondary-navigation,
+    #page-wrapper #page #page-content {
         width: 100%;
+        padding-right: 3rem;
+        padding-left: 3rem;       
         margin-right: auto;
         margin-left: auto;
-        max-width: 1100px; // 1200px
+        max-width: 1000px; // 1200px
     }
 }
 

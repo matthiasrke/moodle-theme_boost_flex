@@ -75,4 +75,13 @@ $THEME->scss = function ($theme) {
 };
 
 // This adds the configurable settings.
+$THEME->extrascsscallback = 'theme_boost_flex_get_extra_scss';
 $THEME->prescsscallback = 'theme_boost_flex_get_pre_scss';
+
+$THEME->haseditswitch = true;
+$THEME->usescourseindex = true;
+
+// By default, all boost theme do not need their titles displayed.
+$THEME->activityheaderconfig = [
+    'notitle' => true
+];

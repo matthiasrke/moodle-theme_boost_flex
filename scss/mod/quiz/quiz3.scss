@@ -26,3 +26,7 @@
 .que.multichoice .answer .incorrect {
     background-color: $state-danger-bg;
 }
+
+.que.multichoice .answer .w-auto {
+    width: 100% !important;
+}
