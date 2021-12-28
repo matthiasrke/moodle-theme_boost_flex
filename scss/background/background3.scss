@@ -1,6 +1,9 @@
 // Gradient.
-body,
-#page-my-index {
+body {
     background-color: $flexbackground;
     background: linear-gradient(270deg, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
   }
+  
+.navbar.fixed-top {
+  height: $navbar-height;
+}

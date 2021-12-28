@@ -1,5 +1,8 @@
 // Background-color.
-body,
-#page-my-index {
+body {
   background-color: $flexbackground;
+}
+
+.navbar.fixed-top {
+  height: $navbar-height;
 }
