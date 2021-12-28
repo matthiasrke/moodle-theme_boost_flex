@@ -77,8 +77,9 @@ if ($ADMIN->fulltree) {
     $description = get_string('buttons_desc', 'theme_boost_flex');
     $buttons1 = get_string('default', 'theme_boost_flex');
     $buttons2 = get_string('buttons2', 'theme_boost_flex');
+    $buttons3 = get_string('buttons3', 'theme_boost_flex');
     $default = '2';
-    $choices = array('1' => $buttons1, '2' => $buttons2);
+    $choices = array('1' => $buttons1, '2' => $buttons2, '3' => $buttons3);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

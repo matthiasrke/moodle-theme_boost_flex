@@ -65,6 +65,7 @@ $string['icons_desc'] = 'Increase icon size.';
 $string['buttons'] = 'Buttons';
 $string['buttons_desc'] = 'Adds differtent button styles.';
 $string['buttons2'] = 'Rounder';
+$string['buttons3'] = 'Pressed';
 
 // Image layout.
 $string['images'] = 'Image layout';

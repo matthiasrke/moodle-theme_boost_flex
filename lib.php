@@ -136,6 +136,9 @@ function theme_boost_flex_get_main_scss_content($theme)
     if ($theme->settings->buttons == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/buttons2.scss');
     }
+    if ($theme->settings->buttons == 3) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/buttons3.scss');
+    }
 
     // Image layout.
     if ($theme->settings->images == 1) {

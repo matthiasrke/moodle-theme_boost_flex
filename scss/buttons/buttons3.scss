@@ -1,0 +1,15 @@
+// Pressed buttons.
+.btn:not(.btn-link),
+.btn:focus:not(.btn-link) {
+    outline: none !important;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .3) !important;
+}
+
+.btn:active:not(.btn-link),
+.drawer-right.show .btn {
+    box-shadow: none !important;
+}
+
+.btn:active:not(.btn-link) {
+    transform: translateY(2px);
+}
