@@ -206,18 +206,6 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Wiki layout.
-    $name = 'theme_boost_flex/wiki';
-    $title = get_string('wiki', 'theme_boost_flex');
-    $description = get_string('wiki_desc', 'theme_boost_flex');
-    $wiki1 = get_string('no', 'theme_boost_flex');
-    $wiki2 = get_string('yes', 'theme_boost_flex');
-    $default = '2';
-    $choices = array('1' => $wiki1, '2' => $wiki2);
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
     // Workshop layout.
     $name = 'theme_boost_flex/workshop';
     $title = get_string('workshop', 'theme_boost_flex');

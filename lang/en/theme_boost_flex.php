@@ -107,10 +107,6 @@ $string['quiz2'] = 'Advanced';
 $string['quiz3'] = 'Advanced + Grayscale';
 $string['quiz4'] = 'Advanced + Colored';
 
-// Wiki layout.
-$string['wiki'] = 'Wiki layout';
-$string['wiki_desc'] = 'Adjust the layout of the wiki.';
-
 // Workshop layout.
 $string['workshop'] = 'Workshop layout';
 $string['workshop_desc'] = 'Style the userplan in the workshop activity.';
