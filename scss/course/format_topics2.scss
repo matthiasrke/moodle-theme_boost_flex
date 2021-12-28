@@ -1,182 +1,30 @@
 // Course Format Topics.
-#page-course-view-topics:not(.editing) .course-content ul li.section {
-    padding-bottom: 0;
-    margin-top: 0;
-    border-radius: $border-radius;
+#page-course-view-topics:not(.editing) .course-content ul li.section.section-summary {
+    position: relative;
 }
 
-#page-course-view-topics:not(.editing) .course-content ul li.section .content {
-    padding: $card-spacer-x;
+#page-course-view-topics:not(.editing) .course-content ul li.section.section-summary a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
 }
 
-#page-course-view-topics:not(.editing) .course-content ul li#section-0 .content {
-    padding: 0 $card-spacer-x;
+#page-course-view-topics:not(.editing) .course-content ul li.section.section-summary .sectionname a:hover {
+    text-decoration: none;
 }
 
-#page-course-view-topics:not(.editing) .course-content ul li.section .progress {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: subtract($border-radius, $border-width);
-    border-bottom-right-radius: subtract($border-radius, $border-width);
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: $card-spacer-x;
-}
-
-#page-course-view-topics:not(.editing) .course-content .single-section ul.topics {
-    display: inherit;
-}
-
-#page-course-view-topics:not(.editing) .course-content .single-section ul.topics li.section:not(#section-0):hover {
-    transform: none;
-    box-shadow: none;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0) {
-    border: $card-border-width solid $card-border-color;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li#section-0,
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.card) {
-    grid-column-start: 1;
-    grid-column-end: -1;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li#section-0 {
-    border: 0;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section .section-title {
-    margin: 0;
-    margin-bottom: .75rem;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section .summarytext {
-    margin: 0;
-}
-
-#page-course-view-topics:not(.editing) .course-content :not(.single-section) > ul.topics li.section .summarytext img {
-    max-width: 100%;
-    height: 150px;
-    margin: 0;
-    object-fit: cover;
-    object-position: center center;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section .summarytext p:last-child {
-    margin-bottom: 0;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul li.card.section:not(#section-0):hover {
+#page-course-view-topics:not(.editing) .course-content ul li.section.section-summary:not(#section-0):hover {
     transform: scale(1.01, 1.01);
     transition: transform 100ms;
     box-shadow: $box-shadow-sm;
 }
 
-#page-course-view-topics:not(.editing) .course-content ul li.card:not(#section-0) a:hover {
-    text-decoration: none;
+#page-course-view-topics:not(.editing) .course-section:last-child {
+    border-bottom: $card-border-width solid $card-border-color;
 }
-
-// Course Format Topics hide info about completion progress.
-#page-course-view-topics:not(.editing) .course-content #completionprogressid {
-    display: none;
-}
-
-// Course Format Topics highlighting
-#page-course-view-topics:not(.editing) .course-content .current::before {
-    border-left: 4px solid $danger;
-    left: 0;
-}
-
-#page-course-view-topics:not(.editing) li.current .sectionname a {
-    font-weight: 700;
-    color: $danger !important;
-}
-
-// Course Format Topics highlighting on larger screens
-@media screen and (min-width: 576px) {
-
-    #page-course-view-topics:not(.editing) .course-content .current::before,
-    #page-course-view-weeks:not(.editing) .course-content .current::before {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content .single-section .summary {
-        margin: 0;
-    }
-}
-
-// Course Format Topics on smaller screens.
-@media screen and (max-width: 576px) {
-    #page-course-view-topics:not(.editing) #region-main-box {
-        padding: 0;
-        border-top: $card-border-width solid $card-border-color;
-    }
-
-    #page-course-view-topics.path-user:not(.editing) #region-main-box {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content ul.topics {
-        display: inherit;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0) {
-        border-width: 1px 0 0 0;
-        border-radius: 0;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0) .content {
-        padding: $card-spacer-x $card-spacer-x;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content ul li#section-0 .content {
-        padding-bottom: $card-spacer-x;
-    }
-
-    #page-course-view-topics:not(.editing) .course-content ul li.section .progress {
-        border-radius: 0;
-    }
-}
-
-// Course Format Topics change colors.
-/* #page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0):nth-child(4n+1) {
-    color: theme-color-level(danger, 6);
-    background-color: $state-danger-bg;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(#section-0):nth-child(4n+1) a {
-    color: darken(theme-color-level(danger, 6), 10%);
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+2) {
-    color: theme-color-level(info, 6);
-    background-color: $state-info-bg;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+2) a {
-    color: darken(theme-color-level(info, 6), 10%);
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+3) {
-    color: theme-color-level(warning, 6);
-    background-color: $state-warning-bg;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+3) a {
-    color: darken(theme-color-level(warning, 6), 10%);
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+4) {
-    color: theme-color-level(success, 6);
-    background-color: $state-success-bg;
-}
-
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section:nth-child(4n+4) a {
-    color: darken(theme-color-level(success, 6), 10%);
-} */
