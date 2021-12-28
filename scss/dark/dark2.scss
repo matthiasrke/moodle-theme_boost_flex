@@ -1,0 +1,30 @@
+// Dark mode.
+@media (prefers-color-scheme: dark) {
+
+    html {
+        background: #121212;
+        filter: invert(1) hue-rotate(180deg);
+    }
+
+    body {
+        color: #121212;
+    }
+
+    img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+
+    a {
+        color: lighten($primary, 30%);
+    }
+
+    a:hover {
+        color: lighten($primary, 40%);
+    }
+
+    .alert-info {
+        color: lighten($info, 20%);
+        background-color: darken($info, 30%);
+        border-color: darken($info, 20%);
+    }
+}

@@ -31,40 +31,14 @@ defined('MOODLE_INTERNAL') || die();
 $string['choosereadme'] = 'Theme Boost Flex is a child theme of Boost. It adds the ability to easy change CSS.';
 // The name of our plugin.
 $string['pluginname'] = 'Boost Flex';
-// We need to include a lang string for each block region.
-$string['region-side-pre'] = 'Right';
-// The name of the second tab in the theme settings.
-$string['advancedsettings'] = 'Advanced settings';
-// The brand color setting.
-$string['brandcolor'] = 'Brand color';
-// The brand color setting description.
-$string['brandcolor_desc'] = 'The accent color.';
 // Name of the settings pages.
-$string['configtitle'] = 'Boost Flex settings';
-// Name of the first settings tab.
-$string['generalsettings'] = 'General settings';
-// Preset files setting.
-$string['presetfiles'] = 'Additional theme preset files';
-// Preset files help text.
-$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/boost>Presets repository</a> for presets that others have shared.';
-// Preset setting.
-$string['preset'] = 'Theme preset';
-// Preset help text.
-$string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
-// Raw SCSS setting.
-$string['rawscss'] = 'Raw SCSS';
-// Raw SCSS setting help text.
-$string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
-// Raw initial SCSS setting.
-$string['rawscsspre'] = 'Raw initial SCSS';
-// Raw initial SCSS setting help text.
-$string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
+$string['configtitle'] = 'Boost Flex';
 
 // Flex settings.
 $string['flexsettings'] = 'Flex settings';
 $string['yes'] = 'Yes';
 $string['no'] = 'No';
-$string['default'] = 'Moodle default';
+$string['default'] = 'Boost default';
 
 // Flex infos.
 $string['styleinfo'] = 'Style settings';
@@ -79,12 +53,6 @@ $string['experimentalinfo'] = 'Experimental settings';
 $string['experimentalinfo_desc'] = 'Control experimental settings.';
 
 // Styles.
-// Rounded corners.
-$string['rounded'] = 'Rounded corners';
-$string['rounded_desc'] = 'Adds rounded corners to additional elements. Rounded is enabled in the preset file.';
-$string['rounded2'] = 'Additional';
-$string['rounded3'] = 'Additional + Rounder buttons';
-
 // Font size.
 $string['fonts'] = 'Font-size';
 $string['fonts_desc'] = 'Increase font size of some texts.';
@@ -92,6 +60,11 @@ $string['fonts_desc'] = 'Increase font size of some texts.';
 // Icon size.
 $string['icons'] = 'Icon size';
 $string['icons_desc'] = 'Increase icon size.';
+
+// Buttons.
+$string['buttons'] = 'Buttons';
+$string['buttons_desc'] = 'Adds differtent button styles.';
+$string['buttons2'] = 'Rounder';
 
 // Image layout.
 $string['images'] = 'Image layout';
@@ -116,6 +89,8 @@ $string['various_desc'] = 'Adjust various styles.';
 // Background layout.
 $string['background'] = 'Background color';
 $string['background_desc'] = 'Adds a color to the background.';
+$string['background2'] = 'Color';
+$string['background3'] = 'Gradient';
 $string['flexbackground'] = 'Background color';
 $string['flexbackground_desc'] = 'Sets a background color, if background layout is activated.';
 
@@ -148,3 +123,9 @@ $string['print_desc'] = 'Print version must be added last.';
 // Atto fix.
 $string['atto'] = 'Atto fix';
 $string['atto_desc'] = 'This fixes an error in the Atto editor that adds unwanted font-sizes.';
+
+// Dark mode.
+$string['dark'] = 'Dark mode';
+$string['dark_desc'] = 'Add an experimental dark mode.';
+$string['dark2'] = 'Filter';
+$string['dark3'] = 'Overwrite CSS';

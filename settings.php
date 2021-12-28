@@ -47,19 +47,6 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
 
-    // Rounded corners.
-    $name = 'theme_boost_flex/rounded';
-    $title = get_string('rounded', 'theme_boost_flex');
-    $description = get_string('rounded_desc', 'theme_boost_flex');
-    $rounded1 = get_string('default', 'theme_boost_flex');
-    $rounded2 = get_string('rounded2', 'theme_boost_flex');
-    $rounded3 = get_string('rounded3', 'theme_boost_flex');
-    $default = '2';
-    $choices = array('1' => $rounded1, '2' => $rounded2, '3' => $rounded3);
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
     // Font size.
     $name = 'theme_boost_flex/fonts';
     $title = get_string('fonts', 'theme_boost_flex');
@@ -80,6 +67,18 @@ if ($ADMIN->fulltree) {
     $icons2 = get_string('yes', 'theme_boost_flex');
     $default = '2';
     $choices = array('1' => $icons1, '2' => $icons2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Buttons.
+    $name = 'theme_boost_flex/buttons';
+    $title = get_string('buttons', 'theme_boost_flex');
+    $description = get_string('buttons_desc', 'theme_boost_flex');
+    $buttons1 = get_string('default', 'theme_boost_flex');
+    $buttons2 = get_string('buttons2', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $buttons1, '2' => $buttons2);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -148,10 +147,11 @@ if ($ADMIN->fulltree) {
     $name = 'theme_boost_flex/background';
     $title = get_string('background', 'theme_boost_flex');
     $description = get_string('background_desc', 'theme_boost_flex');
-    $background1 = get_string('no', 'theme_boost_flex');
-    $background2 = get_string('yes', 'theme_boost_flex');
+    $background1 = get_string('default', 'theme_boost_flex');
+    $background2 = get_string('background2', 'theme_boost_flex');
+    $background3 = get_string('background3', 'theme_boost_flex');
     $default = '2';
-    $choices = array('1' => $background1, '2' => $background2);
+    $choices = array('1' => $background1, '2' => $background2, '3' => $background3);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -270,16 +270,28 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Dark mode.
+    $name = 'theme_boost_flex/dark';
+    $title = get_string('dark', 'theme_boost_flex');
+    $description = get_string('dark_desc', 'theme_boost_flex');
+    $dark1 = get_string('default', 'theme_boost_flex');
+    $dark2 = get_string('dark2', 'theme_boost_flex');
+    $default = '1';
+    $choices = array('1' => $dark1, '2' => $dark2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $settings->add($page);
 
     // Boost general.
     // Each page is a tab - the first is the "General" tab.
-    $page = new admin_settingpage('theme_boost_flex_general', get_string('generalsettings', 'theme_boost_flex'));
+    $page = new admin_settingpage('theme_boost_flex_general', get_string('generalsettings', 'theme_boost'));
 
     // Replicate the preset setting from boost.
     $name = 'theme_boost_flex/preset';
-    $title = get_string('preset', 'theme_boost_flex');
-    $description = get_string('preset_desc', 'theme_boost_flex');
+    $title = get_string('preset', 'theme_boost');
+    $description = get_string('preset_desc', 'theme_boost');
     $default = 'boost_flex.scss';
 
     // We list files in our own file area to add to the drop down. We will provide our own function to
@@ -303,8 +315,8 @@ if ($ADMIN->fulltree) {
 
     // Preset files setting.
     $name = 'theme_boost_flex/presetfiles';
-    $title = get_string('presetfiles', 'theme_boost_flex');
-    $description = get_string('presetfiles_desc', 'theme_boost_flex');
+    $title = get_string('presetfiles', 'theme_boost');
+    $description = get_string('presetfiles_desc', 'theme_boost');
 
     $setting = new admin_setting_configstoredfile(
         $name,
@@ -335,8 +347,8 @@ if ($ADMIN->fulltree) {
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_boost_flex/brandcolor';
-    $title = get_string('brandcolor', 'theme_boost_flex');
-    $description = get_string('brandcolor_desc', 'theme_boost_flex');
+    $title = get_string('brandcolor', 'theme_boost');
+    $description = get_string('brandcolor_desc', 'theme_boost');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -346,13 +358,13 @@ if ($ADMIN->fulltree) {
 
     // Boost advanced.
     // Advanced settings.
-    $page = new admin_settingpage('theme_boost_flex_advanced', get_string('advancedsettings', 'theme_boost_flex'));
+    $page = new admin_settingpage('theme_boost_flex_advanced', get_string('advancedsettings', 'theme_boost'));
 
     // Raw SCSS to include before the content.
     $setting = new admin_setting_configtextarea(
         'theme_boost_flex/scsspre',
-        get_string('rawscsspre', 'theme_boost_flex'),
-        get_string('rawscsspre_desc', 'theme_boost_flex'),
+        get_string('rawscsspre', 'theme_boost'),
+        get_string('rawscsspre_desc', 'theme_boost'),
         '',
         PARAM_RAW
     );
@@ -362,8 +374,8 @@ if ($ADMIN->fulltree) {
     // Raw SCSS to include after the content.
     $setting = new admin_setting_configtextarea(
         'theme_boost_flex/scss',
-        get_string('rawscss', 'theme_boost_flex'),
-        get_string('rawscss_desc', 'theme_boost_flex'),
+        get_string('rawscss', 'theme_boost'),
+        get_string('rawscss_desc', 'theme_boost'),
         '',
         PARAM_RAW
     );

@@ -6,10 +6,3 @@
     transition: transform 100ms;
     box-shadow: $box-shadow-sm;
 }
-
-// Dashboard timeline
-@media screen and (min-width: 992px) {
-    .block-timeline .list-group {
-        max-width: 600px;
-    }
-}

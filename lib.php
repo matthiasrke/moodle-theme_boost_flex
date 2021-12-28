@@ -113,18 +113,6 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
 
     // Styles.
-    // Rounded corners.
-    if ($theme->settings->rounded == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded1.scss');
-    }
-    if ($theme->settings->rounded == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded2.scss');
-    }
-    if ($theme->settings->rounded == 3) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded2.scss');
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/rounded/rounded3.scss');
-    }
-
     // Font size.
     if ($theme->settings->fonts == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/fonts/fonts1.scss');
@@ -139,6 +127,14 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
     if ($theme->settings->icons == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/icons/icons2.scss');
+    }
+
+    // Buttons.
+    if ($theme->settings->buttons == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/buttons1.scss');
+    }
+    if ($theme->settings->buttons == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/buttons/buttons2.scss');
     }
 
     // Image layout.
@@ -179,6 +175,9 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
     if ($theme->settings->background == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background2.scss');
+    }
+    if ($theme->settings->background == 3) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background3.scss');
     }
 
     // Various styles.
@@ -246,6 +245,14 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
     if ($theme->settings->atto == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/atto/atto2.scss');
+    }
+
+    // Dark mode.
+    if ($theme->settings->dark == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/dark/dark1.scss');
+    }
+    if ($theme->settings->dark == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/dark/dark2.scss');
     }
 
     // Boost advanced.
