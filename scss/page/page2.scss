@@ -1,31 +1,27 @@
 // Maximum width on large screens.
 @media screen and (min-width: 1200px) {
 
-    .pagelayout-standard #page.drawers .main-inner,
-    body.limitedwidth #page.drawers .main-inner,
-    .header-maxwidth,
-    .secondary-navigation,
-    #page-wrapper #page #page-content {
+    body #page.drawers .main-inner,
+    body .header-maxwidth,
+    body .secondary-navigation,
+    body #page-wrapper #page #page-content {
         width: 100%;
+        max-width: none;
         padding-right: 3rem;
-        padding-left: 3rem;       
+        padding-left: 3rem;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    body.limitedwidth #page.drawers .main-inner,
+    body.limitedwidth .header-maxwidth,
+    body.limitedwidth .secondary-navigation,
+    body.limitedwidth #page-wrapper #page #page-content {
         max-width: 1000px; // 1200px
     }
-}
 
-@media screen and (min-width: 1800px) {
-    body.drawer-open-left {
-        margin-left: 0;
-    }
-}
-
-// Fix for Dashboard.
-@media screen and (min-width: 1360px) {
-
-    .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card,
-    body.drawer-open-left #region-main.has-blocks .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
-        width: calc(25% - .5rem);
+    body.limitedwidth #page-header>div {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
