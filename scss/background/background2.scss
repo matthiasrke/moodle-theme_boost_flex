@@ -1,6 +1,7 @@
 // Background-color.
-body {
-  background-color: $flexbackground;
+body,
+.pagelayout-login #page {
+  background: $flexbackground;
 }
 
 .navbar.fixed-top {

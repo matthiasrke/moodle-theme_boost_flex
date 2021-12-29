@@ -1,7 +1,8 @@
 // Gradient.
-body {
+body,
+.pagelayout-login #page {
     background-color: $flexbackground;
-    background: linear-gradient(270deg, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
+    background: linear-gradient(to right, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
   }
   
 .navbar.fixed-top {

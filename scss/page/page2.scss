@@ -1,5 +1,5 @@
 // Maximum width on large screens.
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 
     body #page.drawers .main-inner,
     body .header-maxwidth,
@@ -19,9 +19,38 @@
     body.limitedwidth #page-wrapper #page #page-content {
         max-width: 1000px; // 1200px
     }
+}
 
-    body.limitedwidth #page-header>div {
+@media screen and (min-width: 576px) {
+    body #page.drawers .main-inner {
+        padding-right: $card-spacer-x;
+        padding-left: $card-spacer-x;
+    }
+}
+
+body #page-header>div {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 576px) {
+
+    #page.drawers {
+        margin-top: calc(#{$navbar-height} /2);
+    }
+
+    .activity-information,
+    #intro {
         padding-right: 15px;
         padding-left: 15px;
     }
+
+    .editmode-switch-form label {
+        display: none;
+    }
+
+    .editmode-switch-form .custom-switch {
+        margin-top: 2rem;
+    }
+
 }

@@ -1,6 +1,7 @@
 // Course Format Topics.
 #page-course-view-topics:not(.editing) .course-content ul li.section.section-summary {
     position: relative;
+    margin-bottom: 1.5rem;
 }
 
 #page-course-view-topics:not(.editing) .course-content ul li.section.section-summary a::after {
@@ -17,6 +18,11 @@
 
 #page-course-view-topics:not(.editing) .course-content ul li.section.section-summary .sectionname a:hover {
     text-decoration: none;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul li.section.section-summary .sectionname a:focus {
+    background: none;
+    box-shadow: none;
 }
 
 #page-course-view-topics:not(.editing) .course-content ul li.section.section-summary:not(#section-0):hover {

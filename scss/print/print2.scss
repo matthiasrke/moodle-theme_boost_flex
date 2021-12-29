@@ -1,73 +1,37 @@
-// Responsive images.
-
-// Pagelayout print.
-// If impress was added.
-.pagelayout-print #impress,
-.pagelayout-print #impressum {
-    display: none;
-}
-
-//Remove borders.
-.pagelayout-print #region-main {
-    border: none;
-}
-
 // Print version.
 @media print {
 
     body,
-    #page-my-index,
-    #page-my-index #region-main-box,
-    #page-header .card {
-        background-color: $white;
-    }
-
-    body {
-        margin: 0;
+    .pagelayout-login #page {
         color: $black;
+        background: $white;
     }
 
     a {
         color: $black;
     }
 
-    #page-footer,
-    #back-to-top,
+    .drawer-toggles,
     .breadcrumb,
+    .secondary-navigation,
     .activity-information,
-    .activity-navigation,
-    // If those buttons have additional styles.
-    .context-header-settings-menu .action-menu,
-    .btn-edit,
-    // If impress was added.
-    .pagelayout-print #impress,
-    .pagelayout-print #impressum {
+    .container-fluid,
+    footer,
+    .path-course select,
+    .pagelayout-incourse select,
+    .pagelayout-course label,
+    .pagelayout-incourse label,
+    .path-course input,
+    .pagelayout-incourse input,
+    .path-course button,
+    .pagelayout-incourse button,
+    .path-course .btn,
+    .pagelayout-incourse .btn {
         display: none !important;
     }
 
-    #page {
-        margin-top: 0;
+    #page.drawers {
+        margin: 0;
     }
 
-    .page-context-header,
-    .page-header-headings {
-        padding: 0 !important;
-    }
-
-    .page-header-headings h1 {
-        color: $black !important;
-    }
-
-    .page-context-header .page-header-headings {
-        background-color: transparent;
-    }
-
-    #region-main {
-        border: none;
-    }
-
-    // If Icons where added before headlines.
-    .path-mod h2:before {
-        display: none;
-    }
 }

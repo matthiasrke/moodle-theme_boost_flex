@@ -193,6 +193,18 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
 
+    // Folder layout.
+    $name = 'theme_boost_flex/folder';
+    $title = get_string('folder', 'theme_boost_flex');
+    $description = get_string('folder_desc', 'theme_boost_flex');
+    $folder1 = get_string('no', 'theme_boost_flex');
+    $folder2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $folder1, '2' => $folder2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Quiz layout.
     $name = 'theme_boost_flex/quiz';
     $title = get_string('quiz', 'theme_boost_flex');

@@ -101,6 +101,10 @@ $string['format_topics'] = 'Course format topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';
 
 // Mod activities.
+// Folder layout.
+$string['folder'] = 'Folder layout';
+$string['folder_desc'] = 'Style the folder.';
+
 // Quiz layout.
 $string['quiz'] = 'Quiz layout';
 $string['quiz_desc'] = 'Choose from the following quiz layouts.';

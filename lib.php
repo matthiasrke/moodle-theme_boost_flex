@@ -201,6 +201,15 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
 
     // Mod activities.
+    // Folder.
+    if ($theme->settings->folder == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/folder/folder1.scss');
+    }
+    if ($theme->settings->folder == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/folder/folder2.scss');
+    }
+
+
     // Quiz layout.
     if ($theme->settings->quiz == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/quiz/quiz1.scss');
@@ -225,6 +234,7 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/workshop/workshop2.scss');
     }
 
+    // Print.
     // Print layout.
     if ($theme->settings->print == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/print/print1.scss');
