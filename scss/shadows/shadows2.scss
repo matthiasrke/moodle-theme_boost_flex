@@ -1,6 +1,7 @@
 // Shadows.
 .navbar.fixed-top,
-.jsenabled .btn-footer-popover {
+.jsenabled .btn-footer-popover,
+.dropdown-menu.show {
     box-shadow: $box-shadow-sm;
 }
 
