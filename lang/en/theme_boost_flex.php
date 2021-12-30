@@ -75,12 +75,20 @@ $string['page'] = 'Page layout';
 $string['page_desc'] = 'Sets a maximum width of the page for large screens.';
 
 // Dashboard layout.
-$string['dashboard'] = 'Dashboard layout';
-$string['dashboard_desc'] = 'Adjust the layout of the dashboard.';
+$string['dashboard'] = 'Dashboard and my courses layout';
+$string['dashboard_desc'] = 'Adjust the layout of the dashboard and my courses.';
 
 // Front page layout.
 $string['frontpage'] = 'Front page layout';
 $string['frontpage_desc'] = 'Adjust the layout of the front page.';
+
+// Footer.
+$string['footer'] = 'Footer';
+$string['footer_desc'] = 'Style the footer, that is shown on small screens.';
+
+// Shadows.
+$string['shadows'] = 'Shadows';
+$string['shadows_desc'] = 'Add shadows to some elements.';
 
 // Various styles.
 $string['various'] = 'Various styles';

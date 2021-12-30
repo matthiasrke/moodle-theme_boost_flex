@@ -130,6 +130,30 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Footer.
+    $name = 'theme_boost_flex/footer';
+    $title = get_string('footer', 'theme_boost_flex');
+    $description = get_string('footer_desc', 'theme_boost_flex');
+    $footer1 = get_string('no', 'theme_boost_flex');
+    $footer2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $footer1, '2' => $footer2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Shadows.
+    $name = 'theme_boost_flex/shadows';
+    $title = get_string('shadows', 'theme_boost_flex');
+    $description = get_string('shadows_desc', 'theme_boost_flex');
+    $shadows1 = get_string('no', 'theme_boost_flex');
+    $shadows2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $shadows1, '2' => $shadows2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Various styles.
     $name = 'theme_boost_flex/various';
     $title = get_string('various', 'theme_boost_flex');

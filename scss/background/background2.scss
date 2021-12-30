@@ -4,6 +4,17 @@ body,
   background: $flexbackground;
 }
 
+#page-mod-assign-grader,
+#page-course-editsection {
+  background: inherit;
+}
+
+// Remove 1px from navbar so it looks better with colored background.
 .navbar.fixed-top {
   height: $navbar-height;
+}
+
+// Adjust popover after reducing height of navbar.
+.navbar .popover-region-container {
+  top: calc(#{$navbar-height} - 1px);
 }

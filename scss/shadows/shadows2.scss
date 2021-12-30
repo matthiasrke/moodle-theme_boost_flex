@@ -1,0 +1,10 @@
+// Shadows.
+.navbar.fixed-top,
+.jsenabled .btn-footer-popover {
+    box-shadow: $box-shadow-sm;
+}
+
+.jsenabled .btn-footer-popover:hover,
+.drawer-toggles .drawer-toggler .btn:hover {
+    box-shadow: $box-shadow !important;
+}

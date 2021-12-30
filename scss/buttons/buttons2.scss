@@ -1,5 +1,6 @@
 // Rounder buttons.
-.btn {
+.btn,
+.btn-link {
     border-radius: 9999px;
 }
 
@@ -9,4 +10,32 @@
 
 .btn.nav-link {
     border-radius: $border-radius;
+}
+
+// Round buttons.
+// .btn.btn-icon {
+    // background-color: $gray-200;
+// }
+
+// .btn.btn-icon:hover {
+    // background-color: $gray-300;
+// }
+
+// Message app.
+.message-app .closewidget {
+    display: flex;
+    height: $navbar-height;
+    align-items: center;
+    padding-right: 0 !important;
+}
+
+.message-app .closewidget .btn-link {
+    padding: $btn-padding-y $btn-padding-x;
+    margin-right: 5px;
+    margin-left: auto;
+    transition: $btn-transition;
+}
+
+.message-app .closewidget .btn-link .icon::before {
+    content: "\f00d";
 }

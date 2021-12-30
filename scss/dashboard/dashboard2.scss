@@ -1,8 +1,49 @@
-// Adjust the layout of the dashboard
+// Dashboard and my courses.
 
-// Dashboard courses
+// My courses.
+// Add space below filter.
+.block-myoverview > div {
+    margin-bottom: .5rem;
+}
+
+// Course cards pop up when hovered.
 .dashboard-card-deck .dashboard-card:hover {
     transform: scale(1.01, 1.01);
     transition: transform 100ms;
     box-shadow: $box-shadow-sm;
+}
+
+// Remove underlining of course name.
+.dashboard-card-deck .dashboard-card a:hover {
+    text-decoration: none;
+}
+
+// Remove focus styles of the course image.
+.dashboard-card-deck .dashboard-card > a:focus {
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+
+// Make the whole course card clickable.
+.dashboard-card-deck .dashboard-card {
+    position: relative;
+}
+
+.dashboard-card-deck .dashboard-card > a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// Fix that the dropdown can be clicked.
+.dashboard-card-deck .dashboard-card .dropdown {
+    position: relative;
+    z-index: 1;
 }

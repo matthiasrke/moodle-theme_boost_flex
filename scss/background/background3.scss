@@ -1,10 +1,21 @@
 // Gradient.
 body,
 .pagelayout-login #page {
-    background-color: $flexbackground;
-    background: linear-gradient(to right, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
-  }
-  
+  background-color: $flexbackground;
+  background: linear-gradient(to right, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
+}
+
+#page-mod-assign-grader,
+#page-course-editsection {
+  background: inherit;
+}
+
+// Remove 1px from navbar so it looks better with colored background.
 .navbar.fixed-top {
   height: $navbar-height;
+}
+
+// Adjust popover after reducing height of navbar.
+.navbar .popover-region-container {
+  top: calc(#{$navbar-height} - 1px);
 }

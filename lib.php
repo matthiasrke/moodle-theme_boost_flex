@@ -171,6 +171,30 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/frontpage/frontpage2.scss');
     }
 
+    // Footer.
+    if ($theme->settings->footer == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/footer/footer1.scss');
+    }
+    if ($theme->settings->footer == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/footer/footer2.scss');
+    }
+
+    // Shadows.
+    if ($theme->settings->shadows == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/shadows/shadows1.scss');
+    }
+    if ($theme->settings->shadows == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/shadows/shadows2.scss');
+    }
+
+    // Various styles.
+    if ($theme->settings->various == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various1.scss');
+    }
+    if ($theme->settings->various == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various2.scss');
+    }
+
     // Background layout.
     if ($theme->settings->background == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background1.scss');
@@ -180,14 +204,6 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
     if ($theme->settings->background == 3) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/background/background3.scss');
-    }
-
-    // Various styles.
-    if ($theme->settings->various == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various1.scss');
-    }
-    if ($theme->settings->various == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various2.scss');
     }
 
     // Course layout.

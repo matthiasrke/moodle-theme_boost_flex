@@ -1,6 +1,18 @@
-// Larger icons.
+// Icons.
+// Increase icon size.
 .icon {
     font-size: 1.2rem;
     height: 1.2rem;
     width: 1.2rem;
+}
+
+.currentstampbutton .icon {
+    font-size: inherit;
+    height: inherit;
+    width: inherit;
+}
+
+// Edit icon next to section titles.
+.inplaceeditable .quickeditlink {
+    margin-left: .5rem;
 }
