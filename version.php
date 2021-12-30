@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version file.
+ * Theme Boost Flex version file.
  *
  * @package    theme_boost_flex
  * @copyright  2021 Matthias Reike

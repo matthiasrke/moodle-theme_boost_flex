@@ -19,8 +19,6 @@
  *
  * @package    theme_boost_flex
  * @copyright  2021 Matthias Reike
- *             2020 Kristian Ringer
- *             2016 Chris Kenniburg
  *             2016 Ryan Wyllie
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
