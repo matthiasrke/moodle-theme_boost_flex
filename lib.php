@@ -187,6 +187,14 @@ function theme_boost_flex_get_main_scss_content($theme)
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/shadows/shadows2.scss');
     }
 
+    // Message app.
+    if ($theme->settings->message_app == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/message_app/message_app1.scss');
+    }
+    if ($theme->settings->message_app == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/message_app/message_app2.scss');
+    }
+    
     // Various styles.
     if ($theme->settings->various == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/various/various1.scss');

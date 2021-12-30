@@ -90,6 +90,10 @@ $string['footer_desc'] = 'Style the footer, that is shown on small screens.';
 $string['shadows'] = 'Shadows';
 $string['shadows_desc'] = 'Add shadows to some elements.';
 
+// Message app.
+$string['message_app'] = 'Message app styles';
+$string['message_app_desc'] = 'Adjust message app styles.';
+
 // Various styles.
 $string['various'] = 'Various styles';
 $string['various_desc'] = 'Adjust various styles.';

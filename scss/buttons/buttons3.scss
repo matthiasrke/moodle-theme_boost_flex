@@ -14,34 +14,6 @@
     transform: translateY(2px);
 }
 
-// Round buttons.
-// .btn.btn-icon {
-    // background-color: $gray-200;
-// }
-
-// .btn.btn-icon:hover {
-    // background-color: $gray-300;
-// }
-
-// Message app.
-.message-app .closewidget {
-    display: flex;
-    height: $navbar-height;
-    align-items: center;
-    padding-right: 0 !important;
-}
-
-.message-app .closewidget .btn-link {
-    padding: $btn-padding-y $btn-padding-x;
-    margin-right: 5px;
-    margin-left: auto;
-    transition: $btn-transition;
-}
-
-.message-app .closewidget .btn-link .icon::before {
-    content: "\f00d";
-}
-
 // Fix button links without button class not having border radius.
 .btn-link {
     border-radius: $border-radius;

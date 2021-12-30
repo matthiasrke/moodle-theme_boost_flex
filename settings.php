@@ -154,6 +154,18 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Message app.
+    $name = 'theme_boost_flex/message_app';
+    $title = get_string('message_app', 'theme_boost_flex');
+    $description = get_string('message_app_desc', 'theme_boost_flex');
+    $message_app1 = get_string('no', 'theme_boost_flex');
+    $message_app2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $message_app1, '2' => $message_app2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Various styles.
     $name = 'theme_boost_flex/various';
     $title = get_string('various', 'theme_boost_flex');
