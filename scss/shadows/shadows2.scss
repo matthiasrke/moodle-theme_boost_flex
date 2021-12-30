@@ -5,6 +5,8 @@
 }
 
 .jsenabled .btn-footer-popover:hover,
-.drawer-toggles .drawer-toggler .btn:hover {
+.drawer-toggles .drawer-toggler .btn:hover,
+.popover-region-container,
+.popover {
     box-shadow: $box-shadow !important;
 }
