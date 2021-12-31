@@ -3,18 +3,15 @@
 // Add icons to the menu.
 .primary-navigation .navigation a::before,
 .drawer-primary a.list-group-item::before,
+body:not(.path-admin) .secondary-navigation .navigation a::before,
 #user-action-menu a::before {
     font-family: "FontAwesome";
     font-weight: 900;
     margin-right: .5rem;
-    color: rgba($black, .6);
 }
 
-.drawer-primary a.list-group-item.active::before,
-#user-action-menu a:hover::before,
-#user-action-menu a:focus::before,
-#user-action-menu a:active::before {
-    color: $white;
+.primary-navigation .navigation a::before {
+    color: rgba($black, .6);
 }
 
 // Home.
@@ -29,16 +26,28 @@
     content: "\f0e4";
 }
 
-// My courses.
+// My courses and course.
 .primary-navigation .navigation a[href*="courses"]::before,
-.drawer-primary a.list-group-item[href*="courses"]::before {
+.drawer-primary a.list-group-item[href*="courses"]::before,
+body:not(.path-admin) .secondary-navigation .navigation a[href*="course/view"]::before {
     content: "\f19d";
 }
 
-// Site administration.
+// Site administration and course settings.
 .primary-navigation .navigation a[href*="admin"]::before,
-.drawer-primary a.list-group-item[href*="admin"]::before {
+.drawer-primary a.list-group-item[href*="admin"]::before,
+body:not(.path-admin) .secondary-navigation .navigation a[href*="course/edit"]::before {
     content: "\f013";
+}
+
+// Participants.
+body:not(.path-admin) .secondary-navigation .navigation a[href*="user"]::before {
+    content: "\f0c0";
+}
+
+// Reports.
+body:not(.path-admin) .secondary-navigation .navigation a[href*="report"]::before {
+    content: "\f200 ";
 }
 
 // User menu.
@@ -46,7 +55,8 @@
     content: "\f007";
 }
 
-#user-action-menu a[href*="grade"]::before {
+#user-action-menu a[href*="grade"]::before,
+body:not(.path-admin) .secondary-navigation .navigation a[href*="grade"]::before {
     content: "\f0ce";
 }
 
