@@ -1,0 +1,14 @@
+// Borders and border radius.
+
+// Forum, content bank question bank.
+.border,
+.moodle-dialogue-base .moodle-dialogue-wrap {
+    border-radius: $border-radius;
+    border: $card-border-width solid $card-border-color;
+}
+
+// Content bank.
+.cb-navbar {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+}

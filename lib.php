@@ -213,6 +213,14 @@ function theme_boost_flex_get_main_scss_content($theme)
 
     // Various.
 
+    // Borders.
+    if ($theme->settings->borders == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/borders/borders1.scss');
+    }
+    if ($theme->settings->borders == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/borders/borders2.scss');
+    }
+
     // Shadows.
     if ($theme->settings->shadows == 1) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/shadows/shadows1.scss');

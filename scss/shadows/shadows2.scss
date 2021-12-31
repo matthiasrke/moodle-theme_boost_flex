@@ -8,6 +8,8 @@
 .jsenabled .btn-footer-popover:hover,
 .drawer-toggles .drawer-toggler .btn:hover,
 .popover-region-container,
-.popover {
+.popover,
+.modal-content,
+.moodle-dialogue-base .moodle-dialogue-wrap {
     box-shadow: $box-shadow !important;
 }

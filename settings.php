@@ -194,6 +194,18 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
 
+    // Borders.
+    $name = 'theme_boost_flex/borders';
+    $title = get_string('borders', 'theme_boost_flex');
+    $description = get_string('borders_desc', 'theme_boost_flex');
+    $borders1 = get_string('no', 'theme_boost_flex');
+    $borders2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $borders1, '2' => $borders2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Shadows.
     $name = 'theme_boost_flex/shadows';
     $title = get_string('shadows', 'theme_boost_flex');

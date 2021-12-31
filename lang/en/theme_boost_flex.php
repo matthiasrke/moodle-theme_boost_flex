@@ -115,6 +115,10 @@ $string['buttons3'] = 'Pressed';
 
 // Various.
 
+// Borders
+$string['borders'] = 'Borders';
+$string['borders_desc'] = 'Add round corners to more elements.';
+
 // Shadows.
 $string['shadows'] = 'Shadows';
 $string['shadows_desc'] = 'Add shadows to some elements.';

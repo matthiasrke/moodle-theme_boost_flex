@@ -36,7 +36,8 @@ body:not(.path-admin) .secondary-navigation .navigation a[href*="course/view"]::
 // Site administration and course settings.
 .primary-navigation .navigation a[href*="admin"]::before,
 .drawer-primary a.list-group-item[href*="admin"]::before,
-body:not(.path-admin) .secondary-navigation .navigation a[href*="course/edit"]::before {
+body:not(.path-admin) .secondary-navigation .navigation a[href*="course/edit"]::before,
+body:not(.path-admin) .secondary-navigation .navigation a[href*="course/modedit"]::before {
     content: "\f013";
 }
 

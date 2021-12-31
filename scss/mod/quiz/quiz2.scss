@@ -1,5 +1,10 @@
 // Advanced quiz layout.
 
+// Fix that names of questions are not displayed fully in the question bank.
+table#categoryquestions {
+    table-layout: auto;
+}
+
 // Quiz background.
 #page-mod-quiz-attempt section#region-main,
 #page-mod-quiz-review section#region-main,
