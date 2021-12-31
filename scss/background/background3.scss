@@ -5,8 +5,11 @@ body,
   background: linear-gradient(to right, lighten($flexbackground, 10%) 0%, $flexbackground 100%);
 }
 
+// Remove background on same pages.
+.pagelayout-print,
 #page-mod-assign-grader,
-#page-course-editsection {
+#page-course-editsection,
+#page-mod-wiki-prettyview {
   background: inherit;
 }
 

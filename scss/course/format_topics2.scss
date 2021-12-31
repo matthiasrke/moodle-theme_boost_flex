@@ -4,6 +4,7 @@
     margin-bottom: 1.5rem;
 }
 
+// Make the whole section card clickable when one section per page is displayed.
 #page-course-view-topics:not(.editing) .course-content ul li.section.section-summary a::after {
     position: absolute;
     top: 0;

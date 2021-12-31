@@ -26,6 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // General.
+
 // A description shown in the admin theme selector.
 $string['choosereadme'] = 'Theme Boost Flex is a child theme of Boost. It adds the ability to easy change CSS.';
 // The name of our plugin.
@@ -33,105 +34,144 @@ $string['pluginname'] = 'Boost Flex';
 // Name of the settings pages.
 $string['configtitle'] = 'Boost Flex';
 
-// Flex settings.
+// Boost Flex settings.
 $string['flexsettings'] = 'Flex settings';
 $string['yes'] = 'Yes';
 $string['no'] = 'No';
 $string['default'] = 'Boost default';
 
-// Flex infos.
-$string['styleinfo'] = 'Style settings';
-$string['styleinfo_desc'] = 'Control style settings.';
-$string['courseinfo'] = 'Course settings';
+// Boost Flex infos.
+$string['themeinfo'] = 'Theme settings';
+$string['themeinfo_desc'] = 'Control layout and style settings. You can choose which styles you want or return completely to the Boost default.';
+$string['contentinfo'] = 'Content';
+$string['contentinfo_desc'] = 'Control content layout settings.';
+$string['layoutinfo'] = 'Layout';
+$string['layoutinfo_desc'] = 'Control general layout settings.';
+$string['componentsinfo'] = 'Components';
+$string['componentsinfo_desc'] = 'Control components layout settings.';
+$string['backgroundinfo'] = 'Background';
+$string['backgroundinfo_desc'] = 'Control background settings.';
+$string['courseinfo'] = 'Course';
 $string['courseinfo_desc'] = 'Control course layout.';
-$string['modinfo'] = 'Activity settings';
+$string['modinfo'] = 'Activities';
 $string['modinfo_desc'] = 'Control activity layout.';
-$string['printinfo'] = 'Print settings';
-$string['printinfo_desc'] = 'Control print version.';
-$string['experimentalinfo'] = 'Experimental settings';
+$string['variousinfo'] = 'Various';
+$string['variousinfo_desc'] = 'Control various layout settings.';
+$string['printinfo'] = 'Print';
+$string['printinfo_desc'] = 'Control print settings.';
+$string['experimentalinfo'] = 'Experimental';
 $string['experimentalinfo_desc'] = 'Control experimental settings.';
 
-// Styles.
-// Font size.
-$string['fonts'] = 'Font-size';
+// Content.
+
+// Fonts.
+$string['fonts'] = 'Fonts';
 $string['fonts_desc'] = 'Increase font size of some texts.';
 
-// Icon size.
-$string['icons'] = 'Icon size';
+// Icons.
+$string['icons'] = 'Icons';
 $string['icons_desc'] = 'Increase icon size.';
 
-// Buttons.
-$string['buttons'] = 'Buttons';
-$string['buttons_desc'] = 'Adds differtent button styles.';
-$string['buttons2'] = 'Rounder';
-$string['buttons3'] = 'Pressed';
-
-// Image layout.
-$string['images'] = 'Image layout';
+// Images.
+$string['images'] = 'Images';
 $string['images_desc'] = 'Makes most images responsive, but does not reduce file size.';
 
-// Page layout.
-$string['page'] = 'Page layout';
-$string['page_desc'] = 'Sets a maximum width of the page for large screens.';
+// Layout.
 
-// Dashboard layout.
-$string['dashboard'] = 'Dashboard and my courses layout';
+// Page.
+$string['page'] = 'Page';
+$string['page_desc'] = 'Adjust layout and width of the pages.';
+$string['page2'] = 'Advanced';
+$string['page3'] = 'Advanced + Limited';
+$string['page4'] = 'Advanced + Unlimited';
+
+// Dashboard.
+$string['dashboard'] = 'Dashboard and my courses';
 $string['dashboard_desc'] = 'Adjust the layout of the dashboard and my courses.';
 
-// Front page layout.
-$string['frontpage'] = 'Front page layout';
+// Front page.
+$string['frontpage'] = 'Front page';
 $string['frontpage_desc'] = 'Adjust the layout of the front page.';
-
-// Footer.
-$string['footer'] = 'Footer';
-$string['footer_desc'] = 'Style the footer, that is shown on small screens.';
-
-// Shadows.
-$string['shadows'] = 'Shadows';
-$string['shadows_desc'] = 'Add shadows to some elements.';
 
 // Message app.
 $string['message_app'] = 'Message app styles';
 $string['message_app_desc'] = 'Adjust message app styles.';
 
-// Various styles.
-$string['various'] = 'Various styles';
-$string['various_desc'] = 'Adjust various styles.';
+// Footer.
+$string['footer'] = 'Footer';
+$string['footer_desc'] = 'Style the footer, that is shown on small screens.';
 
-// Background layout.
+// Components.
+
+// Navigation.
+$string['nav'] = 'Navigation';
+$string['nav_desc'] = 'Add icons to the navigation menus.';
+
+// Buttons.
+$string['buttons'] = 'Buttons';
+$string['buttons_desc'] = 'Add differtent button styles.';
+$string['buttons2'] = 'Rounder';
+$string['buttons3'] = 'Pressed';
+
+// Various.
+
+// Shadows.
+$string['shadows'] = 'Shadows';
+$string['shadows_desc'] = 'Add shadows to some elements.';
+
+// Additonal styles.
+$string['additional'] = 'Additional styles';
+$string['additional_desc'] = 'Add additional styles.';
+
+// Background.
+
+// Background color.
 $string['background'] = 'Background color';
-$string['background_desc'] = 'Adds a color to the background.';
+$string['background_desc'] = 'Activate a background layout.';
 $string['background2'] = 'Color';
 $string['background3'] = 'Gradient';
-$string['flexbackground'] = 'Background color';
-$string['flexbackground_desc'] = 'Sets a background color, if background layout is activated.';
 
-// Course format.
-// Format topics layout.
+// Transparency.
+$string['transparency'] = 'Transparency';
+$string['transparency_desc'] = 'Add transparency to content elements so that the background is more visible.';
+
+// Variable flexbackground.
+$string['flexbackground'] = 'Background color';
+$string['flexbackground_desc'] = 'Set a background color, if background layout is activated.';
+
+// Course.
+
+// Activitity chooser.
+$string['modchooser'] = 'Activitity chooser';
+$string['modchooser_desc'] = 'Style the activitity chooser.';
+
+// Format topics.
 $string['format_topics'] = 'Course format topics';
 $string['format_topics_desc'] = 'Style the course format Topics.';
 
 // Mod activities.
-// Folder layout.
+
+// Folder.
 $string['folder'] = 'Folder layout';
 $string['folder_desc'] = 'Style the folder.';
 
-// Quiz layout.
+// Quiz.
 $string['quiz'] = 'Quiz layout';
 $string['quiz_desc'] = 'Choose from the following quiz layouts.';
 $string['quiz2'] = 'Advanced';
 $string['quiz3'] = 'Advanced + Grayscale';
 $string['quiz4'] = 'Advanced + Colored';
 
-// Workshop layout.
+// Workshop.
 $string['workshop'] = 'Workshop layout';
 $string['workshop_desc'] = 'Style the userplan in the workshop activity.';
 
-// Print layout.
+// Print version.
 $string['print'] = 'Print version';
 $string['print_desc'] = 'Print version must be added last.';
 
 // Experimental.
+
 // Atto fix.
 $string['atto'] = 'Atto fix';
 $string['atto_desc'] = 'This fixes an error in the Atto editor that adds unwanted font-sizes.';

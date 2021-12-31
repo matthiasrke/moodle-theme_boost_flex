@@ -1,4 +1,4 @@
-// Various styles.
+// Additional styles.
 
 // Quote.
 blockquote,
@@ -12,9 +12,4 @@ blockquote,
 blockquote p:last-child,
 .blockquote p:last-child {
     margin-bottom: 0;
-}
-
-// Modchooser.
-.modchooser .optioninfo a:hover {
-    background-color: $gray-100;
 }

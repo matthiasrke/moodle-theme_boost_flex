@@ -1,23 +1,5 @@
 // Message app.
-.message-app .closewidget {
-    display: flex;
-    height: $navbar-height;
-    align-items: center;
-    padding-right: 0 !important;
-}
 
-.message-app .closewidget .btn-link {
-    padding: $btn-padding-y $btn-padding-x;
-    margin-right: 5px;
-    margin-left: auto;
-    transition: $btn-transition;
-}
-
-.message-app .closewidget .btn-link .icon::before {
-    content: "\f00d";
-}
-
-// Message app.
 // Close button.
 .message-app .closewidget {
     display: flex;

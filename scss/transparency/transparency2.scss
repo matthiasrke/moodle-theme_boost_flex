@@ -1,0 +1,19 @@
+// Transparency.
+body #page.drawers .main-inner {
+    background-color: rgba($white, .95);
+}
+
+.drawer {
+    background-color: rgba($gray-100, .95);
+}
+
+.message-app {
+    background-color: rgba($gray-200, .95);
+}
+
+.secondary-navigation .navigation,
+.moremenu .nav-tabs,
+#region-main,
+section.card {
+    background-color: transparent;
+}

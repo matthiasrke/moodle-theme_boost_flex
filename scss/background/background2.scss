@@ -4,8 +4,11 @@ body,
   background: $flexbackground;
 }
 
+// Remove background on same pages.
+.pagelayout-print,
 #page-mod-assign-grader,
-#page-course-editsection {
+#page-course-editsection,
+#page-mod-wiki-prettyview {
   background: inherit;
 }
 

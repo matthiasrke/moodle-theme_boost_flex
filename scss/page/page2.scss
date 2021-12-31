@@ -1,4 +1,11 @@
-// Maximum width on large screens.
+// Advanced page layout.
+
+body #page-header>div {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+// Large screens.
 @media screen and (min-width: 992px) {
 
     body #page.drawers .main-inner,
@@ -21,6 +28,7 @@
     }
 }
 
+// Medium screens.
 @media screen and (min-width: 576px) {
     body #page.drawers .main-inner {
         padding-right: $card-spacer-x;
@@ -28,11 +36,7 @@
     }
 }
 
-body #page-header>div {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
+// Small screens.
 @media screen and (max-width: 576px) {
 
     #page.drawers {

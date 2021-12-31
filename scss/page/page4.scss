@@ -1,0 +1,10 @@
+// All pages with unlimited width.
+@media screen and (min-width: 992px) {
+
+    body.limitedwidth #page.drawers .main-inner,
+    body.limitedwidth .header-maxwidth,
+    body.limitedwidth .secondary-navigation,
+    body.limitedwidth #page-wrapper #page #page-content {
+        max-width: none;
+    }
+}
