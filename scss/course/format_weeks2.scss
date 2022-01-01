@@ -46,13 +46,15 @@
     color: $white;
     background: $primary;
     padding: $badge-padding-y $badge-padding-x;
-    font-size: 80%;
+    padding-right: $badge-pill-padding-x;
+    padding-left: $badge-pill-padding-x;
+    // font-size: 80%;
     font-weight: $badge-font-weight;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: $badge-border-radius;
+    border-radius: $badge-pill-border-radius;
 }
 
 #page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:empty {
