@@ -151,7 +151,11 @@ $string['modchooser_desc'] = 'Style the activitity chooser.';
 
 // Format topics.
 $string['format_topics'] = 'Course format topics';
-$string['format_topics_desc'] = 'Style the course format Topics.';
+$string['format_topics_desc'] = 'Style the course format topics.';
+
+// Format weeks.
+$string['format_weeks'] = 'Course format weeks';
+$string['format_weeks_desc'] = 'Style the course format weeks.';
 
 // Mod activities.
 

@@ -303,6 +303,18 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Format weeks.
+    $name = 'theme_boost_flex/format_weeks';
+    $title = get_string('format_weeks', 'theme_boost_flex');
+    $description = get_string('format_weeks_desc', 'theme_boost_flex');
+    $format_weeks1 = get_string('no', 'theme_boost_flex');
+    $format_weeks2 = get_string('yes', 'theme_boost_flex');
+    $default = '2';
+    $choices = array('1' => $format_weeks1, '2' => $format_weeks2);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Mod activies.
 
     // Mod activies info.

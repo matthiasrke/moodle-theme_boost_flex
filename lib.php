@@ -275,6 +275,14 @@ function theme_boost_flex_get_main_scss_content($theme)
     if ($theme->settings->format_topics == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
     }
+    
+    // Format weeks.
+    if ($theme->settings->format_weeks == 1) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks1.scss');
+    }
+    if ($theme->settings->format_weeks == 2) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks2.scss');
+    }
 
     // Mod activities.
 

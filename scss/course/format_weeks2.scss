@@ -1,0 +1,60 @@
+// Course format weeks.
+#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+// Make the whole section card clickable when one section per page is displayed.
+#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary .sectionname a:hover {
+    text-decoration: none;
+}
+
+#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary .sectionname a:focus {
+    background: none;
+    box-shadow: none;
+}
+
+#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary:not(#section-0):hover {
+    transform: scale(1.01, 1.01);
+    transition: transform 100ms;
+    box-shadow: $box-shadow-sm;
+}
+
+#page-course-view-weeks:not(.editing) .course-section:last-child {
+    border-bottom: $card-border-width solid $card-border-color;
+}
+
+// Activity count.
+#page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities .activity-count {
+    font-size: $badge-font-size;
+}
+
+// Progress.
+#page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:last-child {
+    color: $white;
+    background: $primary;
+    padding: $badge-padding-y $badge-padding-x;
+    font-size: 80%;
+    font-weight: $badge-font-weight;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $badge-border-radius;
+}
+
+#page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:empty {
+    visibility: hidden;
+}

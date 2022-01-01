@@ -35,3 +35,26 @@
 #page-course-view-topics:not(.editing) .course-section:last-child {
     border-bottom: $card-border-width solid $card-border-color;
 }
+
+// Activity count.
+#page-course-view-topics:not(.editing) .course-content .section-summary .section-summary-activities .activity-count {
+    font-size: $badge-font-size;
+}
+
+// Progress.
+#page-course-view-topics:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:last-child {
+    color: $white;
+    background: $primary;
+    padding: $badge-padding-y $badge-padding-x;
+    font-size: 80%;
+    font-weight: $badge-font-weight;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $badge-border-radius;
+}
+
+#page-course-view-topics:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:empty {
+    visibility: hidden;
+}
