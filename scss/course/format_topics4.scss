@@ -1,0 +1,48 @@
+// Format topics grid.
+#page-course-view-topics:not(.editing) .course-content ul.topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.25rem;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section.section-summary) {
+    grid-column: 1 / span 3;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0) {
+    padding: 0;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0) .course-section-header {
+    padding: $card-spacer-y $card-spacer-x;
+    margin-bottom: 0;
+    color: $card-cap-color;
+    background-color: $card-cap-bg;
+    border-bottom: $card-border-width solid $card-border-color;
+
+    &:first-child {
+        @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    }
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0) .content {
+    padding: $card-spacer-x;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0) .summarytext img {
+    width: 100%;
+    // height: 150px;
+    object-fit: cover;
+    object-position: center center;
+    aspect-ratio: 1;
+    border-radius: $border-radius;
+}
+
+// Activity count and progress.
+#page-course-view-topics:not(.editing) .course-content .section-summary .section-summary-activities .activity-count {
+    display: none;
+}
+
+#page-course-view-topics:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:last-child {
+    display: inline-block;
+}

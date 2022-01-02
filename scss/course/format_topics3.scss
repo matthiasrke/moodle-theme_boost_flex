@@ -1,0 +1,40 @@
+// Format topics colored.
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+1) {
+    background-color: #ffcdd2; // red
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+2) {
+    background-color: #ffe0b2; // orange
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+3) {
+    background-color: #fff9c4; // yellow
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+4) {
+    background-color: #c8e6c9; // green
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+5) {
+    background-color: #b2ebf2; // cyan
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+6) {
+    background-color: #b3e5fc; // lightblue
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+7) {
+    background-color: #bbdefb; // blue
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+8) {
+    background-color: #d1c4e9; // purple
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+9) {
+    background-color: #f8bbd0; // pink
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+10) {
+    background-color: #d7ccc8; // brown
+}

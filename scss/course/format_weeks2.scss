@@ -1,11 +1,12 @@
 // Course format weeks.
-#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary {
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section {
     position: relative;
     margin-bottom: 1.5rem;
+    transition: all .2s ease-out;
 }
 
 // Make the whole section card clickable when one section per page is displayed.
-#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary a::after {
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary a::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,18 +18,24 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary .sectionname a:hover {
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary a:focus::after {
+    box-shadow: $btn-focus-box-shadow;
+    border-radius: $border-radius;
+}
+
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary .sectionname a:hover {
     text-decoration: none;
 }
 
-#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary .sectionname a:focus {
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary .sectionname a:focus {
+    color: darken($primary, 10%);
     background: none;
     box-shadow: none;
 }
 
-#page-course-view-weeks:not(.editing) .course-content ul li.section.section-summary:not(#section-0):hover {
+#page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary:not(#section-0):hover {
     transform: scale(1.01, 1.01);
-    transition: transform 100ms;
+    transition: all .2s ease-in;
     box-shadow: $box-shadow-sm;
 }
 
@@ -59,4 +66,9 @@
 
 #page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:empty {
     visibility: hidden;
+}
+
+// Section summary.
+#page-course-view-weeks:not(.editing) .course-content .section-summary .summarytext {
+    margin: 0;
 }

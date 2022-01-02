@@ -262,10 +262,10 @@ function theme_boost_flex_get_main_scss_content($theme)
 
     // Modchooser.
     if ($theme->settings->modchooser == 1) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/modchooser/modchooser1.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/modchooser/modchooser1.scss');
     }
     if ($theme->settings->modchooser == 2) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/mod/modchooser/modchooser2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/modchooser/modchooser2.scss');
     }
 
     // Format topics.
@@ -275,6 +275,19 @@ function theme_boost_flex_get_main_scss_content($theme)
     if ($theme->settings->format_topics == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
     }
+    if ($theme->settings->format_topics == 3) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics3.scss');
+    }
+    if ($theme->settings->format_topics == 4) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics4.scss');
+    }
+    if ($theme->settings->format_topics == 5) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics3.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_topics4.scss');
+    }
     
     // Format weeks.
     if ($theme->settings->format_weeks == 1) {
@@ -282,6 +295,19 @@ function theme_boost_flex_get_main_scss_content($theme)
     }
     if ($theme->settings->format_weeks == 2) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks2.scss');
+    }
+    if ($theme->settings->format_weeks == 3) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks3.scss');
+    }
+    if ($theme->settings->format_weeks == 4) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks4.scss');
+    }
+    if ($theme->settings->format_weeks == 5) {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks2.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks3.scss');
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost_flex/scss/course/format_weeks4.scss');
     }
 
     // Mod activities.

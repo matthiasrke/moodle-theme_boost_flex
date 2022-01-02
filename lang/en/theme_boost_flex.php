@@ -110,7 +110,7 @@ $string['nav_desc'] = 'Add icons to the navigation menus.';
 // Buttons.
 $string['buttons'] = 'Buttons';
 $string['buttons_desc'] = 'Add differtent button styles.';
-$string['buttons2'] = 'Rounder';
+$string['buttons2'] = 'Pill';
 $string['buttons3'] = 'Pressed';
 
 // Various.
@@ -150,12 +150,20 @@ $string['modchooser'] = 'Activitity chooser';
 $string['modchooser_desc'] = 'Style the activitity chooser.';
 
 // Format topics.
-$string['format_topics'] = 'Course format topics';
+$string['format_topics'] = 'Format topics';
 $string['format_topics_desc'] = 'Style the course format topics.';
+$string['format_topics2'] = 'Advanced';
+$string['format_topics3'] = 'Advanced + Colored';
+$string['format_topics4'] = 'Advanced + Grid';
+$string['format_topics5'] = 'Advanced + Colored + Grid';
 
 // Format weeks.
-$string['format_weeks'] = 'Course format weeks';
+$string['format_weeks'] = 'Format weeks';
 $string['format_weeks_desc'] = 'Style the course format weeks.';
+$string['format_weeks2'] = 'Advanced';
+$string['format_weeks3'] = 'Advanced + Colored';
+$string['format_weeks4'] = 'Advanced + Grid';
+$string['format_weeks5'] = 'Advanced + Colored + Grid';
 
 // Mod activities.
 

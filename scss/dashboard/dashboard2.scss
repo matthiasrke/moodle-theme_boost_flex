@@ -3,14 +3,18 @@
 // My courses.
 
 // Add space below filter.
-.block-myoverview > div {
+.block-myoverview>div {
     margin-bottom: .5rem;
 }
 
 // Course cards pop up when hovered.
+.dashboard-card-deck .dashboard-card {
+    transition: all .2s ease-out;
+}
+
 .dashboard-card-deck .dashboard-card:hover {
     transform: scale(1.01, 1.01);
-    transition: transform 100ms;
+    transition: all .2s ease-in;
     box-shadow: $box-shadow-sm;
 }
 
@@ -20,7 +24,7 @@
 }
 
 // Remove focus styles of the course image.
-.dashboard-card-deck .dashboard-card > a:focus {
+.dashboard-card-deck .dashboard-card>a:focus {
     background: none;
     box-shadow: none;
     outline: none;
@@ -31,7 +35,7 @@
     position: relative;
 }
 
-.dashboard-card-deck .dashboard-card > a::after {
+.dashboard-card-deck .dashboard-card>a::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -41,6 +45,11 @@
     pointer-events: auto;
     content: "";
     background-color: rgba(0, 0, 0, 0);
+}
+
+.dashboard-card-deck .dashboard-card>a:focus::after {
+    box-shadow: $btn-focus-box-shadow;
+    border-radius: $border-radius;
 }
 
 // Fix that the dropdown can be clicked.

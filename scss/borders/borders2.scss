@@ -1,14 +1,26 @@
-// Borders and border radius.
+// Borders.
 
-// Forum, content bank question bank.
+// Border radius in forum, content bank question bank.
 .border,
 .moodle-dialogue-base .moodle-dialogue-wrap {
     border-radius: $border-radius;
-    border: $card-border-width solid $card-border-color;
 }
 
 // Content bank.
 .cb-navbar {
     border-top-right-radius: $border-radius;
     border-top-left-radius: $border-radius;
+}
+
+// File picker.
+.file-picker .fp-content {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+// Border color in forum, content bank, question bank and file picker.
+.border,
+.moodle-dialogue-base .moodle-dialogue-wrap,
+.file-picker .fp-navbar {
+    border-color: $card-border-color;
 }
