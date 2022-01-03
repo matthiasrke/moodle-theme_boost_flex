@@ -46,3 +46,11 @@
 #page-course-view-weeks:not(.editing) .course-content .section-summary .section-summary-activities:last-child .activity-count:last-child {
     display: inline-block;
 }
+
+// Small screens.
+@media screen and (max-width: 576px) {
+
+    #page-course-view-weeks:not(.editing) .course-content ul.weeks {
+        display: block;
+    }
+}
