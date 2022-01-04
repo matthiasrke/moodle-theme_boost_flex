@@ -1,5 +1,5 @@
 // Course format topics.
-#page-course-view-topics:not(.editing) .course-content ul.topics li.section {
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary {
     position: relative;
     margin-bottom: 1.5rem;
     transition: all .2s ease-out;

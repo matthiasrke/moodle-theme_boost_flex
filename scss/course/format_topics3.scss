@@ -1,40 +1,174 @@
 // Format topics colored.
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary) {
+    padding-left: 1rem;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+1) {
+    border-left: 5px solid darken($flexorange, 20%);
+}
+
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+1) {
-    background-color: #ffcdd2; // red
+    background-color: $flexorange;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+1) a {
+    color: darken($flexorange, 65%);
+
+    &:hover {
+        color: darken($flexorange, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+2) {
+    border-left: 5px solid darken($flexlightblue, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+2) {
-    background-color: #ffe0b2; // orange
+    background-color: $flexlightblue;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+2) a {
+    color: darken($flexlightblue, 65%);
+
+    &:hover {
+        color: darken($flexlightblue, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+3) {
+    border-left: 5px solid darken($flexyellow, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+3) {
-    background-color: #fff9c4; // yellow
+    background-color: $flexyellow;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+3) a {
+    color: darken($flexyellow, 65%);
+
+    &:hover {
+        color: darken($flexyellow, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+4) {
+    border-left: 5px solid darken($flexgreen, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+4) {
-    background-color: #c8e6c9; // green
+    background-color: $flexgreen;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+4) a {
+    color: darken($flexgreen, 65%);
+
+    &:hover {
+        color: darken($flexgreen, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+5) {
+    border-left: 5px solid darken($flexpink, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+5) {
-    background-color: #b2ebf2; // cyan
+    background-color: $flexpink;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+5) a {
+    color: darken($flexpink, 65%);
+
+    &:hover {
+        color: darken($flexpink, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+6) {
+    border-left: 5px solid darken($flexcyan, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+6) {
-    background-color: #b3e5fc; // lightblue
+    background-color: $flexcyan;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+6) a {
+    color: darken($flexcyan, 65%);
+
+    &:hover {
+        color: darken($flexcyan, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+7) {
+    border-left: 5px solid darken($flexpurple, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+7) {
-    background-color: #bbdefb; // blue
+    background-color: $flexpurple;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+7) a {
+    color: darken($flexpurple, 65%);
+
+    &:hover {
+        color: darken($flexpurple, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+8) {
+    border-left: 5px solid darken($flexblue, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+8) {
-    background-color: #d1c4e9; // purple
+    background-color: $flexblue;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+8) a {
+    color: darken($flexblue, 65%);
+
+    &:hover {
+        color: darken($flexblue, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+9) {
+    border-left: 5px solid darken($flexred, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+9) {
-    background-color: #f8bbd0; // pink
+    background-color: $flexred;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+9) a {
+    color: darken($flexred, 65%);
+
+    &:hover {
+        color: darken($flexred, 75%);
+    }
+
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section:not(.section-summary):nth-child(10n+10) {
+    border-left: 5px solid darken($flexbrown, 20%);
 }
 
 #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+10) {
-    background-color: #d7ccc8; // brown
+    background-color: $flexbrown;
+}
+
+#page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(10n+10) a {
+    color: darken($flexbrown, 65%);
+
+    &:hover {
+        color: darken($flexbrown, 75%);
+    }
+
 }

@@ -2,7 +2,6 @@
 #page-course-view-weeks:not(.editing) .course-content ul.weeks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.25rem;
 }
 
 #page-course-view-weeks:not(.editing) .course-content ul.weeks li.section:not(.section.section-summary) {
@@ -11,6 +10,7 @@
 
 #page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary:not(#section-0) {
     padding: 0;
+    margin: .5rem;
 }
 
 #page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary:not(#section-0) .course-section-header {
