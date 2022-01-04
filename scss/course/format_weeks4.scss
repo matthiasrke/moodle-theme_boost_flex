@@ -53,4 +53,13 @@
     #page-course-view-weeks:not(.editing) .course-content ul.weeks {
         display: block;
     }
+
+    #page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary:not(#section-0) {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    #page-course-view-weeks:not(.editing) .course-content ul.weeks li.section.section-summary:not(#section-0):nth-child(2n) {
+        margin-top: 1rem;
+    }
 }

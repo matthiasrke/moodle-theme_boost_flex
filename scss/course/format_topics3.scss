@@ -172,3 +172,8 @@
     }
 
 }
+
+// Remove border in single section.
+#page-course-view-topics:not(.editing) .course-content .single-section ul.topics li.section:not(.section-summary) {
+    border-left: 5px solid transparent;
+}

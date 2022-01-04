@@ -53,4 +53,13 @@
     #page-course-view-topics:not(.editing) .course-content ul.topics {
         display: block;
     }
+
+    #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0) {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    #page-course-view-topics:not(.editing) .course-content ul.topics li.section.section-summary:not(#section-0):nth-child(2n) {
+        margin-top: 1rem;
+    }
 }
