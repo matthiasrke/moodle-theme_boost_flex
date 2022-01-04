@@ -300,7 +300,7 @@ if ($ADMIN->fulltree) {
     $format_topics3 = get_string('format_topics3', 'theme_boost_flex');
     $format_topics4 = get_string('format_topics4', 'theme_boost_flex');
     $format_topics5 = get_string('format_topics5', 'theme_boost_flex');
-    $default = '3';
+    $default = '2';
     $choices = array('1' => $format_topics1, '2' => $format_topics2, '3' => $format_topics3, '4' => $format_topics4, '5' => $format_topics5);
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
